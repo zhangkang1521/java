@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
+
+   
+    <!-- 控制台日志，开发用-->
+    <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+        <param name="Target" value="System.out"/>
+<!--         <param name="Threshold" value="DEBUG"/> -->
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[v6_webservice] %-5p [%c] %L - %m%n"/>
+        </layout>
+    </appender>
+    
+    <!-- 异步控制台日志,开发环境用 -->
+    <appender name="ASYNC_CONSOLE" class="org.apache.log4j.AsyncAppender">
+        <param name="blocking" value="false"/>
+        <param name="BufferSize" value="128"/>
+        <param name="LocationInfo" value="true"/>
+        <appender-ref ref="CONSOLE"/>
+    </appender>
+    
+     <logger name="org.hibernate">
+        <level value="WARN"/>
+    </logger>
+    <logger name="org.hibernate.type.descriptor.sql.BasicBinder">
+    	<level value="TRACE"/>
+    </logger>
+
+
+    <!-- 生产环境日志输出到MongoDB、RollingFile -->
+    <root>
+        <priority value="WARN"/>
+        <appender-ref ref="ASYNC_CONSOLE"/>
+<!--         <appender-ref ref="ASYNC_RollingFile"/> -->
+        <!--appender-ref ref="ASYNC_MongoDB"/-->
+    </root>
+
+</log4j:configuration>
