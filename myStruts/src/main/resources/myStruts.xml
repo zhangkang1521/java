@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mystruts>
+
+    <actions>
+        <!-- 登录 -->
+        <action path="login.action" class="org.zk.action.LoginAction" method="login">
+        </action>
+        <!-- 注册 -->
+        <action path="register.action" class="org.zk.action.RegisterAction" method="register">
+        </action>
+    </actions>
+
+</mystruts>
