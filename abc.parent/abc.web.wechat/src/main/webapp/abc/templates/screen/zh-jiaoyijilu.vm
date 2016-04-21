@@ -1,0 +1,231 @@
+ 
+<!--头部-->
+<nav id="nav" class="nav">
+
+<a class="navbar-brand" style="position:absolute; top:-7px; z-index:12;" href="wdzh.htm"><span class="glyphicon glyphicon-menu-left" style="color:#fff; font-size:25px;" aria-hidden="true"></span></a>
+        <div class=" index_suo text-center"><span>交易记录</span></div>
+</nav>
+<!--头部 end-->
+
+<!--content-->
+<div class="container-fluid">
+    <ul id="myTab" class="nav nav-tabs c-nav-tabs text-center">
+       <li class="active"><a href="#record-all" data-toggle="tab">全部记录</a></li>
+       <li><a href="#record-chongzhi" data-toggle="tab">充值记录</a></li>
+       <li><a href="#record-tixian" data-toggle="tab">提现记录</a></li>
+       <li><a href="#record-touzi" data-toggle="tab">投资记录</a></li>
+       <li><a href="#record-shouyi" data-toggle="tab">收益记录</a></li>
+       <li><a href="#record-huiben" data-toggle="tab">回本记录</a></li>
+    </ul>
+    
+    <div id="myTabContent" class="tab-content c-tab-content">
+       <div class="tab-pane fade in active" id="record-all">
+       		<div class="row">
+            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">充值</span></div>
+            	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-2"><span class="c-jyjl-money1">+400</span></div>
+            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-5 text-right"><span>2015-04-20 11:49:26</span></div>
+            </div>
+            
+            <div class="row">
+            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">提现</span></div>
+            	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money2">-400</span></div>
+            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+            </div>    
+            
+            <div class="row">
+            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">投资-项目名称</span></div>
+            	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money3">-167.05</span></div>
+            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+            </div>  
+                 		
+            <div class="row">
+            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">收益-项目名称</span></div>
+            	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money4">+167.05</span></div>
+            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+            </div>       		
+            
+            <div class="row">
+            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">回本-项目名称</span></div>
+            	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money5">+167.05</span></div>
+            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+            </div>       		
+       
+       </div>
+       <div class="tab-pane fade" id="record-chongzhi">
+       		<div class="row">
+            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">充值</span></div>
+            	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money1">+400</span></div>
+            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+            </div>
+       
+       		<div class="row">
+            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">充值</span></div>
+            	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money1">+400</span></div>
+            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+            </div>
+
+       		<div class="row">
+            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">充值</span></div>
+            	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money1">+400</span></div>
+            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+            </div>
+
+       		<div class="row">
+            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">充值</span></div>
+            	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money1">+400</span></div>
+            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+            </div>
+
+       		<div class="row">
+            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">充值</span></div>
+            	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money1">+400</span></div>
+            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+            </div>
+       </div>
+       <div class="tab-pane fade" id="record-tixian">
+            <div class="row">
+            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">提现</span></div>
+            	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money2">-400</span></div>
+            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+            </div>    
+
+            <div class="row">
+            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">提现</span></div>
+            	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money2">-400</span></div>
+            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+            </div>    
+
+            <div class="row">
+            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">提现</span></div>
+            	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money2">-400</span></div>
+            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+            </div>    
+
+            <div class="row">
+            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">提现</span></div>
+            	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money2">-400</span></div>
+            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+            </div>    
+
+            <div class="row">
+            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">提现</span></div>
+            	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money2">-400</span></div>
+            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+            </div>    
+       
+       </div>
+       <div class="tab-pane fade" id="record-touzi">
+            <div class="row">
+            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">项目名称...</span></div>
+            	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money3">-167.05</span></div>
+            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+            </div>  
+       
+            <div class="row">
+            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">项目名称...</span></div>
+            	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money3">-167.05</span></div>
+            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+            </div>  
+       
+            <div class="row">
+            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">项目名称...</span></div>
+            	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money3">-167.05</span></div>
+            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+            </div>  
+
+            <div class="row">
+            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">项目名称...</span></div>
+            	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money3">-167.05</span></div>
+            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+            </div>  
+
+            <div class="row">
+            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">项目名称...</span></div>
+            	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money3">-167.05</span></div>
+            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+            </div>  
+
+       </div>
+       <div class="tab-pane fade" id="record-shouyi">
+            <div class="row">
+            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">项目名称...</span></div>
+            	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money4">+167.05</span></div>
+            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+            </div>       		
+            
+            <div class="row">
+            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">项目名称...</span></div>
+            	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money4">+167.05</span></div>
+            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+            </div>       		
+
+            <div class="row">
+            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">项目名称...</span></div>
+            	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money4">+167.05</span></div>
+            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+            </div>       		
+
+            <div class="row">
+            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">项目名称...</span></div>
+            	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money4">+167.05</span></div>
+            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+            </div>       		
+
+            <div class="row">
+            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">项目名称...</span></div>
+            	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money4">+167.05</span></div>
+            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+            </div>       		
+       </div>
+       <div class="tab-pane fade" id="record-huiben">
+            <div class="row">
+            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">项目名称...</span></div>
+            	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money5">+167.05</span></div>
+            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+            </div>       		
+
+            <div class="row">
+            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">项目名称...</span></div>
+            	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money5">+167.05</span></div>
+            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+            </div>       		
+
+            <div class="row">
+            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">项目名称...</span></div>
+            	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money5">+167.05</span></div>
+            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+            </div>       		
+
+            <div class="row">
+            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">项目名称...</span></div>
+            	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money5">+167.05</span></div>
+            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+            </div> 
+                  		
+            <div class="row">
+            	<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">项目名称...</span></div>
+            	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money5">+167.05</span></div>
+            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+            </div>       		
+       </div>
+    </div>    
+</div>
+<!--content-->
+<script>
+ 
+
+	//保存Cookie完毕以后就可以通过Cookie来获取当前的皮肤了  
+	var cookie_skin = $.cookie("MyCssSkin");     //获取Cookie的值  
+	if (cookie_skin) {                          //如果确实存在Cookie  
+		switchSkin(cookie_skin);     //执行  
+	}
+	  
+});  
+function switchSkin(skinName) {     
+	$("#cssfile").attr("href", "css/skin/" + skinName + ".css"); //设置不同皮肤  
+	$.cookie("MyCssSkin", skinName, { path: '/', expires: 2 });  //保存Cookie  
+} 
+
+</script>
+
+ 

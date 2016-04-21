@@ -1,0 +1,95 @@
+<script>
+var category = $!category.category
+</script>
+<div id="wrap">
+    <form id="main">
+		$csrfToken.hiddenField
+        <table cellpadding="0" cellspacing="0" id="loanTable" class="grid removeMinwidth">
+            <tbody id="rate">
+				$control.setTemplate("loan/loanInfoAddView.vm").setParameter("isIntent", false).setParameter("loanId", $loanId).setParameter("dataId", $dataId).setParameter("category",$!category.category)
+            </tbody>
+        </table>
+    </form>
+    <form id="addView">
+    <table id="table" cellpadding="0" cellspacing="0" class="grid removeMinwidth gridBorder0">
+    <input id="category" type="hidden" value = "$category.category"/>
+		#if ($category.category == 2)     ## 房产抵押贷
+			$control.setTemplate("loan/carAddView.vm").setParameter("isIntent", false).setParameter("loanId", $loanId)
+		#elseif ($category.category == 3) ## 汽车抵押贷
+			$control.setTemplate("loan/houseAddView.vm").setParameter("isIntent", false).setParameter("loanId", $loanId)
+		#end
+    </table>
+    </form>
+	## 影像资料上传
+	$control.setTemplate("common/fileUploadView.vm").setParameter("fileUploadClassType", $fileUploadClassType).setParameter("fileUploadSecondaryClass", $fileUploadSecondaryClass).setParameter("dataId", $dataId).setParameter("loanId", $loanId)
+	#if($btnToAdd!=1)
+    <table cellpadding="0" cellspacing="0" class="grid removeMinwidth gridBorder0">
+        <div class="btn-div">
+            <a href="#" id="custSaveBtn" class="btns btns-primary">确认添加</a>
+            <a href="#" id="BackBtn" class="btns btns-primary">取消返回</a>
+        </div>
+    </table>
+    #end
+</div>
+
+<script>
+    var categoryValue = $category.category;
+
+    $(function () {
+        $("#custSaveBtn").click(function () {
+            $('#loanLogo').validatebox('disableValidation');
+            if($('#payee_status').val()=="1"){
+            if($('#loan_pay_organ').val()=="2"){
+            Colyn.log("请选择收款人类型！");
+            return;
+            }
+            if($('#act_payee_name').val()==""){
+             Colyn.log("请选择收款人！");
+             return;
+            }
+            }
+            if ($('#main').form('validate')) {
+            if($('#category').val()==2||$('#category').val()==3){
+              if (!($('#addView').form('validate'))) { 
+              return;
+            }
+             }
+//                var param = createParam2([{ formId: 'main', relaClass: "main" },{ formId:"carInfo",isAnyRow:true },{ formId:"houseInfo",isAnyRow:true }], "add");  //{ keyId:,action:,main:{},carInfo:[{},{}]  }  param._cs = $)()
+                //param._csrf_token = $("#main input[name='_csrf_token']").val();
+                var param = createParam2([
+                    { formId: 'main', relaClass: "main" }
+                ], "add");
+                var param1 = createParam4([
+                    { formClass: 'carInfo', isAnyRow: true },
+                    { formClass: 'houseInfo', isAnyRow: true }
+                ]);
+                var queryParam = getParam(param) + "&" + getParam(param1);
+
+                $.AjaxColynJson("/loan/json/LoanInfoAddOrEdit.json?", queryParam, function (data) {
+                    if (data.success) {
+					##getUpload(imgObj, 2, '项目信息', data.message, "添加成功", "影像资料上传失败");
+                        Colyn.log(data.message);
+                        var _url = window.location.search;
+                        setTimeout(parent.location.href = '/loan/LoanListView' + _url, 1000); //指定1秒后跳转到项目维护页面
+                    } else {
+                        Colyn.log(data.message);
+                    }
+                });
+            }
+        });
+        $("#BackBtn").click(function () {
+           ## var _url = window.location.search;
+           ## setTimeout(parent.location.href = '/loan/LoanListView' + _url, 1000); //指定1秒后跳转到融资维护页面
+              setTimeout(parent.location.href = '/loan/LoanTempListView', 1000); //指定1秒后跳转到融资申请页面
+            
+            
+        })
+    });
+    
+   
+</script>
+
+<script type="text/javascript" src="/Js/P2PUC/FileUploadView.js"></script>
+<script type="text/javascript" src="/Js/P2PUC/UCCustomer.js"></script>
+
+

@@ -1,0 +1,54 @@
+ 
+<!--首页头部-->
+<nav id="nav" class="nav">
+                	    	<a class="navbar-brand" style="position:absolute; top:-7px; z-index:12;" href="zhaiquanxiangqingye.htm"><span class="glyphicon glyphicon-menu-left" style="color:#fff; font-size:25px;" aria-hidden="true"></span></a>
+
+        <div class="index_suo text-center"><span>确认购买</span></div>
+</nav>
+<!--首页头部 end-->
+
+<!--内容-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="clearfix col-xs-12 col-sm-12">
+            <div id="bd_list">
+            <ul class="list-unstyled mt25px">
+                <li class="clearfix"><span class="pull-left dqmm" style="font-size:16px">购买金额：</span><input type="text" class="pull-left" placeholder="请输入您的投资金额" style="font-size:14px"/></li>
+                <li class="clearfix"><span class="pull-left dqmm" style="font-size:16px">解锁密码：</span><input type="password" class="pull-left" placeholder="请输入解锁密码" style="font-size:14px;width:40%;"/><a href="zh-wangjijiesuomima.html" class=" pull-left">忘记密码？</a></li>
+                <li class="clearfix"><span class="pull-left dqmm" style="font-size:16px">验证码：</span><input type="text" class="pull-left"placeholder="请输入验证码" style="font-size:14px; width:40%;"/><span class="pull-left"><img src="images/yzm.png" width="80%"></span></li>
+            </ul>
+            </div> 
+            <div class="container mt25px clearfix"><input type="checkbox" name="" class="pull-left"><span class="pull-left" style="font-size:14px">我已阅读并同意《债权购买协议》</span></div>
+            <div class="container" style="font-size:14px;margin-top:10px">您当前账户余额为0</div>
+            <p class="bd_save container mt25px" style="margin-bottom:100px;"><a href="goumaichenggong.htm">立即购买</a></p>
+        </div>
+	</div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12">
+            <div class="clearfix c-wdzh-btn">
+                <a class="pull-left btn c-wdzh-btn1" href="zh-chongzhitixian.htm">充值</a>
+                <a class="pull-right btn c-wdzh-btn1" href="zh-chongzhitixian.htm">提现</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--内容-->
+
+
+<script>
+ 
+
+	//保存Cookie完毕以后就可以通过Cookie来获取当前的皮肤了  
+	var cookie_skin = $.cookie("MyCssSkin");     //获取Cookie的值  
+	if (cookie_skin) {                          //如果确实存在Cookie  
+		switchSkin(cookie_skin);     //执行  
+	}
+	  
+});  
+function switchSkin(skinName) {     
+	$("#cssfile").attr("href", "css/skin/" + skinName + ".css"); //设置不同皮肤  
+	$.cookie("MyCssSkin", skinName, { path: '/', expires: 2 });  //保存Cookie  
+} 
+
+</script>
+ 

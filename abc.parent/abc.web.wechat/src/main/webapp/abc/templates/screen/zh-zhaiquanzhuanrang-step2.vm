@@ -1,0 +1,41 @@
+ 
+<!--头部-->
+<nav id="nav" class="nav">
+                    	    	<a class="navbar-brand" style="position:absolute; top:-7px; z-index:12;" href="zh-zhaiquanzhuanrang1.htm"><span class="glyphicon glyphicon-menu-left" style="color:#fff; font-size:25px;" aria-hidden="true"></span></a>
+
+        <div class=" index_suo text-center"><span>债权转让</span></div>
+</nav>
+<!--头部 end-->
+<div class="container">
+    <div class="ff mt20 row">
+        <div class="container clearfix zhuanrang">
+            <span class="pull-left">设置折让率：</span>
+            <span class="pull-left"><input type="text" name="" value="" placeholder="请输入的折让率" /></span>
+        </div>
+    </div>
+    <div class="container zhuanrang mt20 row" style="line-height:20px;">
+        <p>转让后年化收益率<em>8%</em></p>
+        <p><span>转让后收益：</span>80元</p>
+        <p><span>转让后收入=转让金额-手续费-折让金</span></p>
+        <p class="mt40">认购方年化收益率<em>8%</em></p>
+        <p><span>您设置的折让率比较合理，提供折让金会增加转让成功的概率哦~~</span></p>
+        <div class="xyb-anniu mt20"><a href="zh-zhaiquanzhuanrang-step3.htm">下一步</a></div>
+    </div>
+</div>
+<script>
+ 
+
+	//保存Cookie完毕以后就可以通过Cookie来获取当前的皮肤了  
+	var cookie_skin = $.cookie("MyCssSkin");     //获取Cookie的值  
+	if (cookie_skin) {                          //如果确实存在Cookie  
+		switchSkin(cookie_skin);     //执行  
+	}
+	  
+});  
+function switchSkin(skinName) {     
+	$("#cssfile").attr("href", "css/skin/" + skinName + ".css"); //设置不同皮肤  
+	$.cookie("MyCssSkin", skinName, { path: '/', expires: 2 });  //保存Cookie  
+} 
+
+</script>
+ 

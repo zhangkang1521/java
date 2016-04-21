@@ -1,0 +1,31 @@
+ 
+<!--首页头部-->
+<nav id="nav" class="nav">
+                	    	<a class="navbar-brand" style="position:absolute; top:-7px; z-index:12;" href="wdzh.htm"><span class="glyphicon glyphicon-menu-left" style="color:#fff; font-size:25px;" aria-hidden="true"></span></a>
+
+    <div class=" index_suo text-center"><span>充值/提现</span></div>
+</nav>
+<!--首页头部 end-->
+
+<!--内容-->
+<style>
+.c-cztx-btn:hover,.c-cztx-btn:visited{color:#fff;}
+</style>
+<div class="container-fluid">
+    <img class="img-responsive center-block mt25px" src="images/money.png"/>
+    <p class="mt25px" id="sy_je">账户余额：<span>8888.00</span>元</p>
+    <div class="row mt25px" style="background:#fff; padding:10px 15px; margin-bottom:100px;">
+        <div class="col-xs-5 col-sm-5"><label for="inputEmail3" style="font-weight:normal; font-size:18px;">输入金额：</label></div>        
+        <div class="col-xs-7 col-sm-7"><input type="text" id="inputPassword" placeholder="" style="width:100%; border:none;"></div>    
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12">
+            <div class="clearfix c-wdzh-btn navbar-fixed-bottom">
+                <a class="pull-left c-wdzh-btn1" href="zh-chongzhitixian.htm">充值</a>
+                <a class="pull-right c-wdzh-btn1" href="zh-chongzhitixian.htm">提现</a>
+            </div>
+        </div>
+    </div>
+</div>    
+<!--内容-->
+ 

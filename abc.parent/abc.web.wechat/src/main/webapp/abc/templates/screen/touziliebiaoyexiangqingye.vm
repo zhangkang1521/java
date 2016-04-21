@@ -1,0 +1,93 @@
+ 
+<!--头部-->
+<nav id="nav" class="nav">
+            	    	<a class="navbar-brand" style="position:absolute; top:-7px; z-index:12;" href="touziliebiao.htm"><span class="glyphicon glyphicon-menu-left" style="color:#fff; font-size:25px;" aria-hidden="true"></span></a>
+
+        <div class="index_suo text-center"><span>新标市场</span></div>
+</nav>
+<!--头部 end-->
+<div class="container-fluid">
+    <div class="ff" style="border-bottom:1px solid #ccc">
+        <div class="container">
+            <div class="pt20">
+                <div class="xmxq_biaoti  clearfix con_top"><i class="gb_red">抵</i><span class="">大型设备备制作和修复</span></div>
+                    <div class="clearfix">
+                        <div class="pull-left font_s mt20" style="width:40%">
+                            <p class="clearfix"><span class="pull-left">项目金额</span><span class="pull-right">5万元</span></p>
+                            <p class="clearfix"><span class="pull-left">预期收益率</span><span class="pull-right"><span class="fc_yellow">14</span>%</span></p>
+                            <p class="clearfix"><span class="pull-left">投资期限</span><span class="pull-right">24天</span></p>
+                        </div>
+                        <div class="pull-right index_list-r mt20">
+                            <canvas id="circle-progress-default" width="60" height="60"></canvas>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div style="border-top:1px solid #ccc;">
+        	<div class="container pt10">
+                <ul class="clearfix list-unstyled" style="font-size:12px;color:#B6B6B6">
+                    <li class="pull-left"><span class="glyphicon glyphicon-yen"></span><span>按月付息，到期还本</span></li>
+                    <li class="pull-left" style="margin-left:10%"><span class="glyphicon glyphicon-refresh"></span><span class="ml5">灵活转让</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="ff">
+        <div class="mt10" id="yhq_nav" style="border-top:1px solid #ccc">
+            <div class="container">
+                    <ul class="xiangqing-biaoti clearfix mt20 font_26 ">
+                        <li class="pull-left xx text-center xq_cur br-right">项目详情</li>
+                        <li class="pull-left xx text-center br-right">担保机构</li>
+                        <li class="pull-left xx text-center br-right">影像资料</li>
+                        <li class="pull-left xx text-center">投标记录</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <div class="ff">
+            <div class="yhq_tab container">
+                <dl class="xmxq_list">
+                    <dd class="clearfix font_20"><span class="font_l" style="width:30%">名称</span><span class="font_m fc_66" style="width:70%">定存宝 A150415</span></dd>
+                    <dd class="clearfix font_20 mt10"><span class="font_l" style="width:30%">投资范围</span><span class="font_m fc_66" style="width:70%">由合作机构提供100％本息担保的借款项目，包括信用、保证、抵质押等类型</span></dd>
+                    <dd class="clearfix font_20 mt10"><span class="font_l"style="width:30%">加入期</span><span class="font_m fc_66"style="width:70%">2015.04.14 至 2015.04.15</span></li>
+                    <dd class="clearfix font_20 mt10"><span class="font_l"style="width:30%">加入条件</span><span class="font_m fc_66"style="width:70%">加入金额 1,000 元起，且以 1,000 元的倍数递增</span></dd>
+                    <dd class="clearfix font_20 mt10" ><span class="font_l"style="width:30%">期限</span><span class="font_m fc_66"style="width:70%">3个月</span></dd>
+                    <dd class="clearfix font_20 mt10"><span class="font_l"style="width:30%">到期日</span><span class="font_m fc_66"style="width:70%">2015.07.15</span></dd>
+                    <dd class="clearfix font_20 mt10"><span class="font_l"style="width:30%">到期赎回方式</span><span class="font_m fc_66"style="width:70%">债权优先购买，平台统筹赎回</span></dd>
+                </dl>
+            </div>    
+            <div class="yhq_tab container" style="display:none">
+                <p class="mt20"><img src="images/dbjg.png" /></p>
+                <p class="font_l fc_36 mt20">迅付信息科技有限公司</p>
+                <p class="font_s mt20">交通银行（全称：交通银行股份有限公司）始建于1908年，是中国近代以来延续历史最悠久、最古老的银行，也是近代中国的发钞行之一。现为中国五大国有银行之一。交通银行是中国境内
+            主要综合金融服务提供商之一，并正在成为一家以商业银行为主体，跨市场，国际化的大型银行集团，业务范围涵盖商业银行、投资银行、证券、信托、金融租赁、基金管理...
+            </p>
+            </div>    
+    <style>
+    .yhq_tab img{width:49% }
+    </style>
+            <div class="yhq_tab container" style="display:none">
+            	<div class="text-center">
+                	<p class="clearfix"><img src="images/yxzl.png" class="pull-left" /><img src="images/yxzl.png"  class="pull-right"/></p>
+                    <p class="clearfix"><img src="images/yxzl.png" class="pull-left" /><img src="images/yxzl.png"  class="pull-right"/></p>
+                    <p class="clearfix"><img src="images/yxzl.png" class="pull-left" /><img src="images/yxzl.png"  class="pull-right"/></p>
+                </div>
+            </div>    
+    
+            <div class="yhq_tab container" style="display:none">
+                <dl class="tbjl_list">
+                    <dd class="clearfix fc_36 user_line" style="font-size:14px;"><span class="pull-left" style="width:20%">用户</span><span class="pull-left" style="width:30%">投标金额</span><span class="pull-right" style="width:50%">时间</span></dd>
+                    <dd class="clearfix font_s fc_52"><span class="pull-left" style="width:20%">us****1</span><span class="pull-left" style="width:30%">167.05</span><span class="pull-right" style="width:50%">2015-04-20 11:49:26</span></dd>
+                    <dd class="clearfix font_s fc_52"><span class="pull-left" style="width:20%">us****1</span><span class="pull-left" style="width:30%">167.05</span><span class="pull-right" style="width:50%">2015-04-20 11:49:26</span></dd>
+                    <dd class="clearfix font_s fc_52"><span class="pull-left" style="width:20%">us****1</span><span class="pull-left" style="width:30%">167.05</span><span class="pull-right" style="width:50%">2015-04-20 11:49:26</span></dd>
+                    <dd class="clearfix font_s fc_52"><span class="pull-left" style="width:20%">us****1</span><span class="pull-left" style="width:30%">167.05</span><span class="pull-right" style="width:50%">2015-04-20 11:49:26</span></dd>
+                    <dd class="clearfix font_s fc_52"><span class="pull-left" style="width:20%">us****1</span><span class="pull-left" style="width:30%">167.05</span><span class="pull-right" style="width:50%">2015-04-20 11:49:26</span></dd>
+                </dl>
+            </div>    
+            
+    </div>
+    <div class="xmxq-anniu"><a href="querentouzi.htm">立即投资</a></div>
+</div>
+ 

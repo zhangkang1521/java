@@ -1,0 +1,25 @@
+ 
+<!--首页头部-->
+<nav id="nav" class="nav">
+            	        <a class="navbar-brand" style="position:absolute; top:-7px; z-index:12;" href="zh-anquanzhongxin.htm"><span class="glyphicon glyphicon-menu-left" style="color:#fff; font-size:25px;" aria-hidden="true"></span></a>
+
+        <div class="index_suo text-center"><span>头像更新</span></div>
+    </nav>
+<!--首页头部 end-->
+
+<!--内容-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="clearfix col-xs-12 col-sm-12">
+                <p class="container text-center mt25px"><img src="images/man.png"/></p>
+                <dl class="c-bg-white c-zh-list">
+        <dd><a class="clearfix" href="zh-jiaoyijilu.htm"><span class="pull-left" style="font-size:16px;">从相册中选一张</span><span class="pull-right">&gt;</span></a><input type="file"/></dd>
+        <dd><a class="clearfix" href="zh-wodehongbao.htm"><span class="pull-left" style="font-size:16px;">拍一张照片</span><span class="pull-right">&gt;</span></a><input type="file"/></dd>
+    </dl>
+          </div>
+	</div>
+</div>
+<!--内容-->
+
+
+ 

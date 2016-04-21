@@ -1,0 +1,36 @@
+<!--首页头部-->
+#if($!fromKind!='shouji')
+<nav id="nav" class="nav">
+    <a class="navbar-brand nabar_color"  href="/account/myAccount/accountOverview"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a>
+    <div class="clearfix index_suo text-center"><span>关于我们</span> </div>
+</nav>	
+#end
+<!--首页头部 end-->
+
+<!-- 内容区 -->
+<div class="container" style="overflow-x:hidden">
+	<div class="row">
+	#foreach($articleInfo in $!articleInfoDOList)
+		<div class="col-sm-12 col-xs-12">
+				<div class="baozhang_content">
+					<p class="baozhang baozhang_top clearfix">
+						<i class="glyphicon glyphicon-triangle-right pull-left baozhang_cion mr5"></i>
+						<span class="pull-left baozhanng_name">
+							#if($!stringUtil.length($!articleInfo.aiArticleTitle)>16)
+									$!stringUtil.substring($!articleInfo.aiArticleTitle, 0,16)... 
+							#else
+									$!articleInfo.aiArticleTitle
+							#end
+						</span>
+					</p>
+					<div style="display:none">
+						#noescape()
+							$!articleInfo.aiArticlecontent
+						#end
+					</div>
+				</div>
+		</div>
+		#end
+	</div>
+</div>
+<!-- 内容区 end -->

@@ -1,0 +1,80 @@
+ 
+<!--首页头部-->
+<nav id="nav" class="nav">
+    	                	    	<a class="navbar-brand" style="position:absolute; top:-7px; z-index:12;" href="wdzh.htm"><span class="glyphicon glyphicon-menu-left" style="color:#fff; font-size:25px;" aria-hidden="true"></span></a>
+
+        <div class=" index_suo text-center"><span>邀请好友</span></div>
+</nav>
+<!--首页头部 end-->
+
+<!--内容-->
+<div class="container-fluid" style="background:#eaf1f1">
+    <div class="text-center" style="background:#baedf2"><img src="images/c-images/haoyou-bg.png" class="img-responsive center-block"></div>    
+     
+    <dl class="c-bg-white c-zh-list c-f28">
+        <dd class="clearfix" style="cursor:pointer"  data-toggle="modal" data-target="#myModal1" data-backdrop="static"><span class="pull-left">面对面邀请</span><span class="pull-right">&gt;</span></dd>
+        <dd class="clearfix" style="cursor:pointer"  data-toggle="modal" data-target="#myModal12" data-backdrop="static"><span class="pull-left">朋友圈邀请</span><span class="pull-right">&gt;</span></dd>
+    </dl>
+    
+    <p class="c-yqhy-shuoming">邀请的好友成功投资后可获得投资金额的<span class="c-red">万分之二的现金</span>回报，直接邀请的好友再次邀请好友且投资后，还可获得<span class="c-red">万分之零点五的现金</span>回报。</p>    
+            
+</div>
+<!--内容-->
+
+<!--面对面弹出层-->
+<div class="modal myModal" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+    <div class="modal-dialog">
+        <div class="modal-content" style="overflow:hidden;">
+<!--            <div class="modal-header">
+                <h4 class="modal-title text-center" id="myModalLabel1"></h4>
+            </div>
+-->            <div class="modal-body">
+            	<p class="text-center c-f28" style="font-size:18px;">关注就送50元</p>
+            	<p style="font-size:14px; line-height:30px;color:#999">100元做投资人，关注就送50元！10-15%年化收益，网上理财赚翻天！从此告别死工资，速速关注吧！</p>
+                <p class="text-center"><img src="images/c-images/haoyou-ma.png" class="img-responsive center-block"></p>
+                <div class="text-center c-click"><a class="btn-block" href="zh-yaoqinghaoyou.htm">好的</a></div>
+           </div>
+        </div>
+    </div>
+</div>
+<!--面对面弹出层-->
+
+<!--朋友圈弹出层-->
+<style>
+.modal-dialog{width:90%;}
+</style>
+<div class="modal myModal" id="myModal12" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+    <div class="modal-dialog">
+        <div class="modal-content" style="overflow:hidden;">
+<!--            <div class="modal-header">
+                <h4 class="modal-title text-center" id="myModalLabel1"></h4>
+            </div>
+-->            <div class="modal-body">
+            	<p class="text-center c-f28" style="font-size:18px;">分享给好友</p>
+                <i><textarea class="c-yqhy-text">100元做投资人，注册就送50元！10-15%年化收益，网上理财赚翻天！从此告别死工资，速速注册吧！www.autouserve.com.cn</textarea></i>
+                <p style="font-size:14px">点击下面图标可将内容分享给好友。</p>
+                
+                <div class="row c-yqhy-row1">
+                	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center"><a href=""><img src="images/c-images/haoyou1.png" class="img-responsive center-block">QQ好友</a></div>
+                	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center"><a href=""><img src="images/c-images/haoyou2.png" class="img-responsive center-block">QQ空间</a></div>
+                	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center"><a href=""><img src="images/c-images/haoyou3.png" class="img-responsive center-block">腾讯微博</a></div>
+                </div>
+                
+                <div class="row c-yqhy-row1">
+                	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center"><a href=""><img src="images/c-images/haoyou4.png" class="img-responsive center-block">微信好友</a></div>
+                	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center"><a href=""><img src="images/c-images/haoyou5.png" class="img-responsive center-block">朋友圈</a></div>
+                	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center"><a href=""><img src="images/c-images/haoyou6.png" class="img-responsive center-block">新浪微博</a></div>
+                </div>
+
+                <div class="row c-yqhy-row1">
+                	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center"><a href=""><img src="images/c-images/haoyou7.png" class="img-responsive center-block">短信</a></div>
+                </div>
+                
+                <div class="text-center c-click"><a class="btn-block" href="zh-yaoqinghaoyou.htm">我知道了</a></div>
+                
+           </div>
+        </div>
+    </div>
+</div>
+<!--朋友圈弹出层-->
+ 

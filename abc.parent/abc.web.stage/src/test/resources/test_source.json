@@ -1,0 +1,54 @@
+[
+    {
+        "protocol":"dubbo",
+        "data_source_name":"mysource",
+        "desc":"dubbo接口测试",
+        "sequence_num":"1",
+        "configuration":{
+            "method":"getUserListByPage",
+            "reference.interface":"com.aliyun.abc.user.service.UserService",
+            "registry.address":"10.249.193.109:9090",
+            "registry.check":"true","ccc":"test"
+        },
+        
+        "function_argument_types":[
+            {
+                "field_id":"string",
+                "is_single":true,
+                "sequence_num":1,
+                "field_value":[
+                    {"field":"","key":"cookie.id","type":"java.lang.String"}]
+            },
+            {
+                "field_id":"map",
+                "sequence_num":2,
+                "is_single":false,
+                "field_value":[
+                    {"field":"字段名","key":"对应的变量名","type":"字段类型"},
+                    {"field":"字段名","key":"对应的变量名","type":"字段类型"}]
+            }
+        ],
+                    
+        "default_paramters":{
+            "perpage":150,"page":1,"name":"mynam2e"
+        }
+    },
+    
+    {
+        "protocol":"dubbo",
+        "data_source_name":"dubbo",
+        "desc":"11",
+        "sequence_num":2,
+        "function_argument_types":[
+            {"field_id":"string","field_value":[{"field":"","key":"1","type":""}],"sequence_num":"1"},
+            {"field_id":"map","field_value":[{"field":"","key":"1","type":""}],"sequence_num":"1"}
+        ],
+        
+        "configuration":{
+            "reference.interface":"com.aliyun.abc.user.service.UserService",
+            "registry.address":"10.249.193.109:9090",
+            "registry.check":"true","method":""
+        },
+        "default_params":{"11":"11"}
+    }
+]

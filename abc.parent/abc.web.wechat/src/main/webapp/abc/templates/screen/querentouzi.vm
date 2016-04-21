@@ -1,0 +1,70 @@
+ 
+<!--首页头部-->
+<nav id="nav" class="nav">
+        	    	<a class="navbar-brand" style="position:absolute; top:-7px; z-index:12;" href="touziliebiaoyexiangqingye.htm"><span class="glyphicon glyphicon-menu-left" style="color:#fff; font-size:25px;" aria-hidden="true"></span></a>
+
+    <div class=" index_suo text-center"><span>确认投资</span></div>
+</nav>
+<!--首页头部 end-->
+
+<!--内容-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="clearfix col-xs-12 col-sm-12">
+            <div id="bd_list">
+            <ul class="list-unstyled mt25px">
+                <li class="clearfix"><span class="pull-left dqmm mt3" style="font-size:16px">投资金额：</span><input type="text" class="pull-left" placeholder="请输入您的投资金额" style="font-size:14px"/></li>
+                <li class="clearfix"><span class="pull-left dqmm mt3" style="font-size:16px">解锁密码：</span><input type="password" class="pull-left" placeholder="请输入解锁密码" style="font-size:14px;width:40%;"/><a href="zh-wangjijiesuomima.html" class=" pull-right">忘记密码？</a></li>
+                <li class="clearfix"><span class="pull-left dqmm mt3" style="font-size:16px">验证码：</span><input type="text" class="pull-left"placeholder="请输入验证码" style="font-size:14px; width:40%;"/><span class="pull-right"><img src="images/yzm.png" width="80%"></span></li>
+            </ul>
+            </div> 
+            <div class="container mt25px clearfix"><input type="checkbox" name="" class="pull-left"><span class="pull-left" style="font-size:14px">我已阅读并同意《债权购买协议》</span></div>
+            <div class="container clearfix" style="font-size:14px;margin-top:10px"><span class="pull-left btn" data-toggle="modal" data-target="#myModal1" style="color:#C82B01">使用红包</span><span class="pull-right" style="color:#999">您当前账户余额为0</span></div>
+            <p class="bd_save container mt25px" style="margin-bottom:100px;"><a href="goumaichenggong.htm">立即购买</a></p>
+        </div>
+	</div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12">
+            <div class="clearfix c-wdzh-btn navbar-fixed-bottom">
+                <a class="pull-left c-wdzh-btn1" href="zh-chongzhitixian.htm">充值</a>
+                <a class="pull-right c-wdzh-btn1" href="zh-chongzhitixian.htm">提现</a>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<!--内容-->
+<div class="modal myModal" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+    <div class="modal-dialog">
+        <div class="modal-content" style=" overflow:hidden;">
+        	<img src="images/hongbao.png" style="width:100%">
+            <div class="modal-body">
+            	<div class="clearfix dk">
+                	<div class="clearfix"><span class="pull-left">红包可用金额</span><span class="pull-left" style="color:#CD323A;margin-left:2%">¥3000</span></div>
+                	<div class="clearfix mt20"><span class="pull-left mt8">红包抵扣金额</span><span class="pull-left" style="margin-left:2%"><input type="text" placeholder="请输入抵扣金额" class="hb-input"/></span></div>
+                </div>
+                <p class="qd-btn container mt25px " style="margin-bottom:20px;"><a href="goumaichenggong.htm">确认</a></p>
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+<script>
+ 
+
+	//保存Cookie完毕以后就可以通过Cookie来获取当前的皮肤了  
+	var cookie_skin = $.cookie("MyCssSkin");     //获取Cookie的值  
+	if (cookie_skin) {                          //如果确实存在Cookie  
+		switchSkin(cookie_skin);     //执行  
+	}
+	  
+});  
+function switchSkin(skinName) {     
+	$("#cssfile").attr("href", "css/skin/" + skinName + ".css"); //设置不同皮肤  
+	$.cookie("MyCssSkin", skinName, { path: '/', expires: 2 });  //保存Cookie  
+} 
+
+</script>
+
+ 

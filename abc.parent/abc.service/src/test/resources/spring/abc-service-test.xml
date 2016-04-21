@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-2.5.xsd"
+       default-autowire="byName" default-dependency-check="none" default-lazy-init="false">
+
+    <import resource="abc-dao-test.xml" />
+    <import resource="abc-service.xml" />
+    <bean id="automaticInvestJob" class="com.autoserve.abc.service.job.AutomaticInvestJob" />
+
+    <!-- <context:annotation-config />
+    <context:component-scan base-package="com.autoserve.abc.service.biz" /> -->
+
+	<!-- 
+	<bean id="queryUserService" class="com.aliyun.abc.service.api.QueryUserServiceImpl" />
+	<bean id="queryUserAccessControlService" class="com.aliyun.abc.service.api.QueryUserAccessControlServiceImpl" />
+	-->
+    <bean id="ossService" class="com.autoserve.abc.service.oss.OssServiceImpl" init-method="init">
+        <property name="accessId" value="jHkKisZ077iYr1zD"/>
+        <property name="accessKey" value="Wu3TAvtXTaYedcRQeNFj5vBOUrJsmv"/>
+        <property name="ossEndpoint" value="http://oss.aliyuncs.com"/>
+        <property name="defaultBucket" value="zyzx2015"/>
+        <property name="downloadHyperlink" value="http://#bucketName#.oss-cn-hangzhou.aliyuncs.com/"/>
+    </bean>
+
+</beans>

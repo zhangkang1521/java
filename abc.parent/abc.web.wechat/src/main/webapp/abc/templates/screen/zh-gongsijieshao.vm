@@ -1,0 +1,48 @@
+ 
+<!--头部-->
+<nav id="nav" class="nav">
+                            	                	    	<a class="navbar-brand" style="position:absolute; top:-7px; z-index:12;" href="gywm.htm"><span class="glyphicon glyphicon-menu-left" style="color:#fff; font-size:25px;" aria-hidden="true"></span></a>
+
+        <div class=" index_suo text-center"><span>公司介绍</span></div>
+</nav>
+<!--头部 end-->
+
+<div id="wrap1">
+    <div class="container gsjs">
+    	<div class="thumbnail mt20"><img src="images/gywm.png" width="100%"></div>
+        <p class="fc_66" style="font-size:12px">奥拓思维由一支有着丰富金融及互联网经验的团队成立，我们致力于为广大缺乏投资渠道的人们提供一个安全、诚信、低风险、回报稳定的理财渠道。在金融产品的设计不断变得让人眼花缭乱、各种理财渠道推销鱼龙混杂的今天，奥拓思维希望能帮助您化解看似高深的理财投资，将各种复杂的理财产品变成让所有人都能看得懂的理财计划！ 过去的10年内，几乎每一个人都完成了从"在线下买东西"到"在网上买东西"的转变。我们深信，未来的10年，互联网不仅能让人方便地花钱，更能让每一个人方便地在网上理财赚钱。</p>
+        <p class="mt20 thumbnail"><img src="images/gs.png"></p>
+        <p class="fc_66" style="font-size:12px;">奥拓思维有着成熟、严谨的风险控制评估机制，同互联网的便捷、透明、低成本联系起来，建立起了国内首屈一指的理财系统和产品资源。CPI不等人，我们深信联农贷能够成为网上投资理财最安全、最便捷、最正规的渠道。 最后我们坚信：投资者的利益高于一切。在联农贷上进行投资理财，完全免费、绝对透明！</p>
+        <p class="">我们的团队</p>
+    </div>
+    
+    <div class="container gsjs">
+        <p class="f_bg" style="font-size:12px;">公司的核心成员来自于银行、财富管理、资产管理及电子商务等行业精英，以先进的管理理念和科学的运作模式，构筑普惠式的金融服务体系，提供简便快捷的自助融资方式、专业风险过滤的投资渠道和专业独立的理财咨询服务，以满足社会日渐广泛、深入的融资理财需求，让普通国民参与到财富再分配过程，享受国家经济发展的成果，实现共同富裕的"中国梦"。</p>
+    </div>
+    
+    <div class="container gsjs">
+        <p class=" fc_36 mt30">大事记</p>
+        <p class="clearfix"  style="font-size:12px;"><span class="pull-left"><img src="images/dsj.png"></span><span class="pull-left fc_66">2014年05月10日 </span><span class="pull-left fc_36">奥拓思维作为互联网金融新锐唯一代表与清华大学全球金融论坛共谋改革-发展新征程</span></p>
+        <p class="clearfix" style="font-size:12px;"><span class="pull-left"><img src="images/dsj.png"></span><span class="pull-left fc_66">2014年05月10日 </span><span class="pull-left fc_36">奥拓思维作为互联网金融新锐唯一代表与清华大学全球金融论坛共谋改革-发展新征程</span></p>
+        <p class="clearfix" style="font-size:12px;"><span class="pull-left"><img src="images/dsj.png"></span><span class="pull-left fc_66">2014年05月10日 </span><span class="pull-left fc_36">奥拓思维作为互联网金融新锐唯一代表与清华大学全球金融论坛共谋改革-发展新征程</span></p>
+        <p class="clearfix" style="font-size:12px;"><span class="pull-left"><img src="images/dsj.png"></span><span class="pull-left fc_66">2014年05月10日 </span><span class="pull-left fc_36">奥拓思维作为互联网金融新锐唯一代表与清华大学全球金融论坛共谋改革-发展新征程</span></p>
+        <p class="clearfix" style="font-size:12px;"><span class="pull-left"><img src="images/dsj.png"></span><span class="pull-left fc_66">2014年05月10日 </span><span class="pull-left fc_36">奥拓思维作为互联网金融新锐唯一代表与清华大学全球金融论坛共谋改革-发展新征程</span></p>
+        <p class="clearfix" style="font-size:12px;"><span class="pull-left"><img src="images/dsj.png"></span><span class="pull-left fc_66">2014年05月10日 </span><span class="pull-left fc_36">奥拓思维作为互联网金融新锐唯一代表与清华大学全球金融论坛共谋改革-发展新征程</span></p>
+    </div>
+</div>
+<script>
+ 
+	//保存Cookie完毕以后就可以通过Cookie来获取当前的皮肤了  
+	var cookie_skin = $.cookie("MyCssSkin");     //获取Cookie的值  
+	if (cookie_skin) {                          //如果确实存在Cookie  
+		switchSkin(cookie_skin);     //执行  
+	}
+	  
+});  
+function switchSkin(skinName) {     
+	$("#cssfile").attr("href", "css/skin/" + skinName + ".css"); //设置不同皮肤  
+	$.cookie("MyCssSkin", skinName, { path: '/', expires: 2 });  //保存Cookie  
+} 
+
+</script>
+ 

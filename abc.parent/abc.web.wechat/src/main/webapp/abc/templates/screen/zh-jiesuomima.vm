@@ -1,0 +1,31 @@
+ 
+<!--首页头部-->
+<nav id="nav" class="nav">
+                        	            	        <a class="navbar-brand" style="position:absolute; top:-7px; z-index:12;" href="zh-anquanzhongxin.htm"><span class="glyphicon glyphicon-menu-left" style="color:#fff; font-size:25px;" aria-hidden="true"></span></a>
+
+    <div class=" index_suo text-center"><span>解锁密码</span></div>
+</nav>
+<!--首页头部 end-->
+
+<!--内容-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="clearfix col-xs-12 col-sm-12">
+        	<div id="bd_list">
+            	<ul class="list-unstyled container mt25px">
+            	<li class="clearfix " style="font-size:16px"><span class="pull-left dqmm">当前密码：</span><input type="text" class="pull-left" placeholder="请输入您的当前密码" style="width:65%"/></li>
+                <li class="clearfix" style="font-size:16px"><span class="pull-left dqmm">新密码：</span><input type="text" class="pull-left"placeholder="请输入新密码" style="font-size:16px; width:60%;"/></li>
+                                <li class="clearfix" style="font-size:16px"><span class="pull-left dqmm">确认密码：</span><input type="text" class="pull-left"placeholder="请输入确认密码" style="font-size:16px; width:60%;"/></li>
+
+            </ul>
+
+            </div>
+            <p class="bd_more container mt25px"><a href="zh-wangjijiesuomima.htm">忘记密码？</a></p>
+            <p class="bd_save container mt25px"><a href="zh-anquanzhongxin-baocun.htm">保存</a></p>
+        </div>
+     </div>
+</div>
+
+            
+</div>
+ 

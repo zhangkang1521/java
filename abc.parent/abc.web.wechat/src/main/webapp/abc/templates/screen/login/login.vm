@@ -1,0 +1,89 @@
+<div class="container" style="overflow-x:hidden;">
+    	<div class="list-group">
+          <p class="text-center" id="login_bg"><img src="/images/login_gai.png" class="img-responsive"/> </p>
+
+            <div class="row">
+			<form action="/login/json/doLogin.json" id="loginform" method="post">
+            <div class="col-sm-1 col-xs-1"> </div>
+            <div class="col-sm-10 col-xs-10" style="margin-top: 20px;">
+                <ul class="list-unstyled" id="gai_login">
+                    <li class="clearfix mt10"><img src="/images/denglu_cion1.jpg" class="pull-left ml5" width="30"/> <input type="text" class="pull-left ml5"  placeholder="请输入登录账号" id="userName" name="userName"></li>
+                    <li class="clearfix mt10"><img src="/images/denglu_cion2.jpg" class="pull-left ml5" width="30"/> <input type="password" class="pull-left ml5"  placeholder="请输入登录密码" id="passWord" name="passWord"></li>
+                    <li class="clearfix mt10"><img src="/images/denglu_cion3.jpg" class="pull-left ml5" width="30"/><input type="text" class="pull-left ml5"  placeholder="请输入验证码" id="securityCode" name="securityCode" style="width:100px">
+                    <img id="imgCode" src="/securityCode/json/code.json"  class="vmiddle" style="width:90px;left:1px;position:relative; top:-1px" align="right" onclick="this.src='/securityCode/json/code.json?d='+new Date().getTime()"/></li>
+                </ul>
+                 <p class="clearfix" style="line-height:12px; margin-bottom:0px"><a href="/login/findpassword" class="pull-right c_666 ml15" style="margin:0px 5px">忘记密码</a><a href="/register/Toregister" class="pull-right c_666" style="margin:0px 0px 0px 10px;">注册</a> </p>
+                <p class="text-center 10"><a href="javascript:toLogin();"><img src="/images/denglu_btn.png" class="img-responsive"/> </a> </p>
+            </div>
+            <div class="col-sm-1 col-xs-1"></div>
+            </from>
+        </div>
+       
+	</div> 
+</div>
+</div>
+<!-- 内容区 end -->
+<script type="text/javascript">
+	
+	
+	//获取验证码
+	function getCode(){													
+		document.getElementById("imgCode").src="/securityCode/json/code.json?d="+new Date().getTime();
+	}
+
+	//用户名
+	function userNameCheck(){
+		var userName=$.trim($('#userName').val());
+		if(userName==null || userName==""){
+			layer.alert('用户名不能为空！');
+			return false;
+		}
+		return true;
+	}
+	//密码
+	function passwordCheck(){
+		var password=$.trim($('#passWord').val());
+		if(password==null || password==""){
+			layer.alert('密码不能为空！');
+			return false;
+		}
+		return true;
+	}
+	//验证码
+	function securityCodeCheck(){
+		var securityCode=$.trim($('#securityCode').val());
+		if(securityCode==null || securityCode==""){
+			layer.alert('验证码不能为空！');
+			return false;
+		}
+		return true;
+	}
+	//校验
+	function check(){
+		if(userNameCheck() && passwordCheck() && securityCodeCheck()){
+			return true;
+		}
+		return false;
+	}
+	//登录
+	function toLogin(){
+		if(check()){
+			$.ajax({
+			     type: 'POST',
+			     url: '/login/json/doLogin.json' ,
+			     dataType:'json',
+			    data: $('#loginform').serialize(),
+			    success: function(data){
+			    	 if(data.success){
+			    		 window.location.href="/index/index";
+			    	 }else{
+			    		 getCode();
+			    		 layer.alert(data.message); 
+			    	 }	    	
+			    }
+			});
+		}	
+	}
+
+	
+</script>

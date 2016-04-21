@@ -1,0 +1,58 @@
+ 
+<!--头部-->
+<nav id="nav" class="nav">
+<a class="navbar-brand" style="position:absolute; top:-7px; z-index:12;" href="zh-zichantongji.htm"><span class="glyphicon glyphicon-menu-left" style="color:#fff; font-size:25px;" aria-hidden="true"></span></a>
+        <div class=" index_suo text-center"><span>已收本金</span></div>
+</nav>
+<!--头部 end-->
+
+<!--content-->
+<div class="container-fluid c-tab-content">
+    <div class="row">
+        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">项目名称</span></div>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money5">+167.05</span></div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+    </div>       		
+
+    <div class="row">
+        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">项目名称</span></div>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money5">+167.05</span></div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+    </div>       		
+
+    <div class="row">
+        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">项目名称</span></div>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money5">+167.05</span></div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+    </div>       		
+
+    <div class="row">
+        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">项目名称</span></div>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money5">+167.05</span></div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+    </div> 
+                
+    <div class="row">
+        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><span class="c-jyjl-lei">项目名称</span></div>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><span class="c-jyjl-money5">+167.05</span></div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right"><span>2015-04-20 11:49:26</span></div>
+    </div>       		
+</div>
+<!--content-->
+<script>
+ 
+
+	//保存Cookie完毕以后就可以通过Cookie来获取当前的皮肤了  
+	var cookie_skin = $.cookie("MyCssSkin");     //获取Cookie的值  
+	if (cookie_skin) {                          //如果确实存在Cookie  
+		switchSkin(cookie_skin);     //执行  
+	}
+	  
+});  
+function switchSkin(skinName) {     
+	$("#cssfile").attr("href", "css/skin/" + skinName + ".css"); //设置不同皮肤  
+	$.cookie("MyCssSkin", skinName, { path: '/', expires: 2 });  //保存Cookie  
+} 
+
+</script>
+ 

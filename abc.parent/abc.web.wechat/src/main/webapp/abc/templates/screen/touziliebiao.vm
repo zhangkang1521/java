@@ -1,0 +1,222 @@
+ 
+<!--首页头部-->
+<nav id="nav" class="nav">
+        <a class="navbar-brand" style="position:absolute; top:-7px; z-index:12;" href="#"><span class="glyphicon glyphicon-menu-left" style="color:#fff; font-size:25px;" aria-hidden="true"></span></a>
+
+        <div class=" index_suo text-center"><span>项目列表</span></div>
+</nav>
+<!--首页头部 end-->
+<!--导航弹窗-->
+<div class="modal myModal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                ×
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                账户锁定
+                </h4>
+            </div>
+            <div class="modal-body">
+            <p>您的账户即将锁定</p>
+            <p>是否确定锁定账户？</p>
+            </div>
+            <div class="modal-footer clearfix">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">取消
+                </button>
+                <button type="button" class="btn btn-primary">
+                确定
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--导航弹窗 end-->
+<!--内容-->
+	<div class="container-fluid" id="tz_tab">
+        <div class="ff" style="border-bottom:1px solid #ccc">
+            <div class="row">
+                <ul class="touzi-list clearfix">
+                    <li class="pull-left xx text-center touzi-cur">新标市场</li>
+                    <li class="pull-left xx text-center">转让市场</li>
+                </ul>
+            </div>
+        </div>
+        <div class="mt10">
+                    <div class="yhq_tab">
+                        <div class="index_list ff">
+        <div class="container">
+        <div class="index_list-l">
+         <a href="touziliebiaoyexiangqingye.htm">
+                <div class="clearfix con_top"><i class="gb_green">保</i><span>大型设大型设备制作和修复</span></div>
+              
+                <ul class="clearfix wdtz_list1 list-unstyled">
+                    <li class="pull-left"><span>年化收益</span><span class="fc_black"><strong>15</strong>%</span></li>
+                    <li class="pull-left"><span style="margin-left:10%">项目金额</span><span style="margin-left:10%" class="fc_black"><em>5万元</em></span></li>
+                    <li class="pull-left"><span>剩余期限</span><span class="fc_black"><em>20天</em></span></li>
+                    <li class="pull-left"><canvas id="circle-progress-default" width="50" height="50"></canvas></li>
+                </ul>
+                <ul class="clearfix list-unstyled" style="font-size:12px;color:#B6B6B6">
+                	<li class="pull-left"><span class="glyphicon glyphicon-yen"></span><span>按月付息，到期还本</span></li>
+                    <li class="pull-left" style="margin-left:10%"><span class="glyphicon glyphicon-refresh"></span><span>灵活转让</span></li>
+                </ul>
+                </a>
+            </div>
+        </div>
+        </div>
+                        <div class="index_list ff">
+                            <div class="container">
+                                <div class="index_list-l">
+                                		 <a href="touziliebiaoyexiangqingye.htm">
+                <div class="clearfix con_top"><i class="gb_red">抵</i><span>大型设大型设备制作和修复</span></div>
+              
+                <ul class="clearfix wdtz_list1 list-unstyled">
+                    <li class="pull-left"><span>年化收益</span><span class="fc_black"><strong>15</strong>%</span></li>
+                    <li class="pull-left"><span style="margin-left:10%">项目金额</span><span style="margin-left:10%" class="fc_black"><em>5万元</em></span></li>
+                    <li class="pull-left"><span>剩余期限</span><span class="fc_black"><em>20天</em></span></li>
+                    <li class="pull-left"><canvas id="circle-progress-default1" width="50" height="50"></canvas></li>
+                </ul>
+                <ul class="clearfix list-unstyled" style="font-size:12px;color:#B6B6B6">
+                	<li class="pull-left"><span class="glyphicon glyphicon-yen"></span><span>按月付息，到期还本</span></li>
+                    <li class="pull-left" style="margin-left:10%"><span class="glyphicon glyphicon-refresh"></span><span>灵活转让</span></li>
+                </ul>
+                </a>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="index_list ff">
+                            <div class="container">
+                                <div class="index_list-l">
+                                <a href="touziliebiaoyexiangqingye.htm">
+                <div class="clearfix con_top"><i class="gb_green">保</i><span>大型设大型设备制作和修复</span></div>
+              
+                <ul class="clearfix wdtz_list1 list-unstyled">
+                    <li class="pull-left"><span>年化收益</span><span class="fc_black"><strong>15</strong>%</span></li>
+                    <li class="pull-left"><span style="margin-left:10%">项目金额</span><span style="margin-left:10%" class="fc_black"><em>5万元</em></span></li>
+                    <li class="pull-left"><span>剩余期限</span><span class="fc_black"><em>20天</em></span></li>
+                    <li class="pull-left"><canvas id="circle-progress-default2" width="50" height="50"></canvas></li>
+                </ul>
+                <ul class="clearfix list-unstyled" style="font-size:12px;color:#B6B6B6">
+                	<li class="pull-left"><span class="glyphicon glyphicon-yen"></span><span>按月付息，到期还本</span></li>
+                    <li class="pull-left" style="margin-left:10%"><span class="glyphicon glyphicon-refresh"></span><span>灵活转让</span></li>
+                </ul>
+                </a>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="yhq_tab" style="display:none">
+                        <div class="index_list ff">
+        <div class="container">
+        <div class="index_list-l">
+        <a href="zhaiquanxiangqingye.htm">
+                <div class="clearfix con_top"><i class="gb_blue">转</i><span>大型设大型设备制作和修复</span></div>
+                <ul class="clearfix wdtz_list1 list-unstyled mt10">
+                    <li class="pull-left"><span>年化收益</span><span  class="fc_black"><strong>15</strong>%</span></li>
+                    <li class="pull-left"><span style="margin-left:10%">项目金额</span><span style="margin-left:10%"><em>5万元</em></span></li>
+                    <li class="pull-left"><span>剩余期限</span><span class="fc_black"><em>20天</em></span></li>
+                    <li class="pull-left"><canvas id="circle-progress-default3" width="50" height="50"></canvas></li>
+                </ul>
+                <ul class="clearfix list-unstyled" style="font-size:12px;color:#B6B6B6">
+                	<li class="pull-left"><span class="glyphicon glyphicon-yen"></span><span>按月付息，到期还本</span></li>
+                    <li class="pull-left" style="margin-left:10%"><span class="glyphicon glyphicon-thumbs-up"></span><span class="ml5">第三方担保</span></li>
+                </ul>
+                </a>
+            </div>
+        </div>
+        </div>
+                        <div class="index_list ff">
+                            <div class="container">
+                                <div class="index_list-l">
+                                <a href="zhaiquanxiangqingye.htm">
+                                        <div class="clearfix con_top"><i class="gb_blue">转</i><span>大型设大型设备制作和修复</span></div>
+                                        <ul class="clearfix wdtz_list1 list-unstyled mt10">
+                                            <li class="pull-left"><span class="fc_black">年化收益</span><span><strong>15</strong>%</span></li>
+                                            <li class="pull-left"><span style="margin-left:10%">项目金额</span><span style="margin-left:10%" class="fc_black"><em>5万元</em></span></li>
+                                            <li class="pull-left"><span>剩余期限</span><span class="fc_black"><em>20天</em></span></li>
+                                            <li class="pull-left"><canvas id="circle-progress-default4" width="50" height="50"></canvas></li>
+                                        </ul>
+                                        <ul class="clearfix list-unstyled" style="font-size:12px;color:#B6B6B6">
+                                            <li class="pull-left"><span class="glyphicon glyphicon-yen"></span><span>按月付息，到期还本</span></li>
+                                            <li class="pull-left" style="margin-left:10%"><span class="glyphicon glyphicon-thumbs-up"></span><span class="ml5">第三方担保</span></li>
+                                        </ul>
+                                        </a>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="index_list ff">
+                            <div class="container">
+                                <div class="index_list-l">
+                                <a href="zhaiquanxiangqingye.htm">
+                                        <div class="clearfix con_top"><i class="gb_blue">转</i><span>大型设大型设备制作和修复</span></div>
+                                        <ul class="clearfix wdtz_list1 list-unstyled mt10">
+                                            <li class="pull-left"><span>年化收益</span><span class="fc_black"><strong>15</strong>%</span></li>
+                                            <li class="pull-left"><span style="margin-left:10%">项目金额</span><span style="margin-left:10%" class="fc_black"><em>5万元</em></span></li>
+                                            <li class="pull-left"><span>剩余期限</span><span class="fc_black"><em>20天</em></span></li>
+                                            <li class="pull-left"><canvas id="circle-progress-default5" width="50" height="50"></canvas></li>
+                                        </ul>
+                                        <ul class="clearfix list-unstyled" style="font-size:12px;color:#B6B6B6">
+                                            <li class="pull-left"><span class="glyphicon glyphicon-yen"></span><span>按月付息，到期还本</span></li>
+                                            <li class="pull-left" style="margin-left:10%"><span class="glyphicon glyphicon-thumbs-up"></span><span class="ml5">第三方担保</span></li>
+                                        </ul>
+                                        </a>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+				var showMe = function () {
+					circleProgress({
+						id: 'circle-progress-default',
+						 progress: 80
+					});
+					circleProgress({
+						id: 'circle-progress-default1',
+						progress: 80
+					});
+					circleProgress({
+						id: 'circle-progress-default2',
+						progress: 80
+					});
+					circleProgress({
+						id: 'circle-progress-default3',
+						 progress: 80
+					});
+					circleProgress({
+						id: 'circle-progress-default4',
+						progress: 80
+					});
+					circleProgress({
+						id: 'circle-progress-default5',
+						progress: 80
+					});
+				};
+				showMe();
+				
+				
+                $('.xx').click(function(){
+                    $(this).addClass('touzi-cur').siblings().removeClass('touzi-cur');	
+                    var _index = $(this).index('.xx');
+                    $('.yhq_tab').eq(_index).show().siblings().hide();
+                });
+ 
+	//保存Cookie完毕以后就可以通过Cookie来获取当前的皮肤了  
+	var cookie_skin = $.cookie("MyCssSkin");     //获取Cookie的值  
+	if (cookie_skin) {                          //如果确实存在Cookie  
+		switchSkin(cookie_skin);     //执行  
+	}
+	  
+});  
+function switchSkin(skinName) {     
+	$("#cssfile").attr("href", "css/skin/" + skinName + ".css"); //设置不同皮肤  
+	$.cookie("MyCssSkin", skinName, { path: '/', expires: 2 });  //保存Cookie  
+} 
+
+
+            </script>
+
+ 

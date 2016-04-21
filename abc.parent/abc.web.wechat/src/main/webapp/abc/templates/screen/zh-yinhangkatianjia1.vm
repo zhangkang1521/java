@@ -1,0 +1,41 @@
+ 
+<!--头部-->
+<nav id="nav" class="nav">
+        	            	        <a class="navbar-brand" style="position:absolute; top:-7px; z-index:12;" href="zh-yinhangkaguanli.htm"><span class="glyphicon glyphicon-menu-left" style="color:#fff; font-size:25px;" aria-hidden="true"></span></a>
+
+    <div class=" index_suo text-center"><span>添加银行卡</span></div>
+</nav>
+<!--头部 end-->
+
+<div class="container yh">
+    <p style="font-size:18px;">请绑定持卡人本人的银行卡</p>
+    <div class="row">
+    	<div class="col-xs-12 col-sm-12 col-md-12 c-l-lg-12 ff line" style="font-size:16px;">
+            <span class="pull-left dqmm">持卡人：</span>
+            <span class="pull-left"><input class="yh_input" name="" value="" placeholder="请输入持卡人姓名"></span>
+        </div>
+        
+        <div class="col-xs-12 col-sm-12 col-md-12 c-l-lg-12 ff" style="font-size:16px;">
+            <span class="pull-left dqmm">卡号：</span>
+            <span class="pull-left" style="display:inline-block; width:60%"><input class="yh_input" name="" value="" placeholder="请输入银行卡号" maxlength="18"></span>
+        </div>    
+    </div>
+    <div class="yh_anniu mt20"><a href="zh-yinhangkatianjia2.htm">下一步</a></div>
+</div>
+<script>
+ 
+
+	//保存Cookie完毕以后就可以通过Cookie来获取当前的皮肤了  
+	var cookie_skin = $.cookie("MyCssSkin");     //获取Cookie的值  
+	if (cookie_skin) {                          //如果确实存在Cookie  
+		switchSkin(cookie_skin);     //执行  
+	}
+	  
+});  
+function switchSkin(skinName) {     
+	$("#cssfile").attr("href", "css/skin/" + skinName + ".css"); //设置不同皮肤  
+	$.cookie("MyCssSkin", skinName, { path: '/', expires: 2 });  //保存Cookie  
+} 
+
+</script>
+ 

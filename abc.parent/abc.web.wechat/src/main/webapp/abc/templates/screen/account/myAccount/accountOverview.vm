@@ -1,0 +1,239 @@
+<nav id="nav" class="nav">
+    <div class="clearfix index_suo text-center"><span>我们</span> </div>
+</nav>
+<!--首页头部 end-->
+<!-- 内容区 -->
+<style>
+	.img-circle{width:100px; height:100px;border-radius:50px;}
+</style></tstyle>
+<div class="container" style="overflow-x:hidden">
+<div class="row">
+    <div class="col-sm-12 col-xs-12">
+    <div class="c-us-box">
+        <p class="c-us_img"><img src="/images/c-bg.png"width="100%"> </p>
+        <ul class="list-unstyled clearfix c-us-info">
+            <li class="pull-left ml5">
+            	<a href="/account/seCenter/headPortrait">
+            		#if($!user.userHeadImg)
+               			#set($img=$!user.userHeadImg)
+               		#else
+               			#set($img="/images/c-touxiang.png")
+               		#end
+            		<img class="img-circle img-responsive c-tx" src="$!{img}" width="100">
+            	</a>
+            </li>
+            <li class="pull-left ml5 mt25">
+                <div>您好：$!{user.userName}</div>
+<!--                 <dl class="clearfix"> -->
+<!--                     <dd class="pull-left">投资等级：</dd> -->
+<!--                     <dd class="pull-left"> -->
+<!--                     	#if($!{levelIcon})  -->
+<!-- 							<img src="$!{levelIcon}" class="img" id="danteng"> -->
+<!-- 						#else -->
+<!-- 							<font style="color:red;">暂无对应等级</font> -->
+<!-- 						#end -->
+<!--                     </dd> -->
+<!--                 </dl> -->
+            </li>
+        </ul>    
+    </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-sm-12 col-xs-12 mt5">
+    	<ul class="list-unstyled c-us-list">
+    		#if(!$!{account.accountNo})
+    			#if($!{user.userType}=='1')
+    				<!--个人开户-->	
+    				<li class="c-line clearfix pt_b5">
+		            	<a href="javascript:;" onclick="openAccount()" class="clearFloat">
+		                	<div class="pull-left"><img class="c-us-icon" src="/images/c-icon1.png" width="25">第三方开户</div>
+		                    <div class="pull-right">&gt;</div>            
+		                </a>
+		            </li>
+    			#else
+    				<!-- 企业开户 -->
+   					<li class="c-line clearfix pt_b5">
+		            	<a href="javascript:;" onclick="companyOpenAccount()" class="clearFloat">
+		                	<div class="pull-left"><img class="c-us-icon" src="/images/c-icon1.png" width="25">第三方开户</div>
+		                    <div class="pull-right">&gt;</div>            
+		                </a>
+		            </li>	
+			    #end
+            #end
+            <!-- 授权 -->
+            #if($!user.userAuthorizeFlag!=1)
+	            <li class="c-line clearfix pt_b5">
+	            	<a href="javascript:;" onclick="auth()" class="clearFloat">
+	                	<div class="pull-left"><img class="c-us-icon" src="/images/c-icon1.png" width="25">授权</div>
+	                    <div class="pull-right">&gt;</div>            
+	                </a>
+	            </li>
+            #end
+            #if(!$!user.userRealnameIsproven  || $!user.userRealnameIsproven==0)
+            <li class="c-line clearfix pt_b5">
+                <a href="/account/seCenter/realNameCertify" class="clearFloat">
+                    <div class="pull-left"><img class="c-us-icon" src="/images/c-icon2.png" width="25">实名认证</div>
+                    <div class="pull-right">&gt;</div>
+                     #if($!{user.userRealName}) 
+                    <div class="pull-right" style="margin-right:10px;">$!{user.userRealName}</div>
+                     #end
+                </a>
+            </li>
+            #else
+            <li class="c-line clearfix pt_b5">
+                <a>
+                    <div class="pull-left"><img class="c-us-icon" src="/images/c-icon2.png" width="25">实名认证</div>
+                     #if($!{user.userRealName}) 
+                    <div class="pull-right" style="margin-right:10px;">$!{user.userRealName}</div>
+                     #end
+                </a>
+            </li>
+            #end
+            <li class="c-line clearfix pt_b5">
+                <a href="/account/seCenter/phoneVerify" class="clearFloat">
+                    <div class="pull-left"><img class="c-us-icon" src="/images/c-icon10.png" width="25">手机验证</div>
+                    <div class="pull-right">&gt;</div>
+                    #if($!{user.userPhone}) 
+                   	<div class="pull-right" style="margin-right:10px;"> $!{user.userPhone}</div>
+                    #end
+                </a>
+            </li>
+            <li class="c-line clearfix pt_b5">
+                <a href="/account/seCenter/emailVerify" class="clearFloat">
+                    <div class="pull-left"><img class="c-us-icon" src="/images/c-icon11.png" width="25">邮箱验证</div>
+                    <div class="pull-right">&gt;</div>
+                    #if($!{user.userEmail})
+                    <div class="pull-right" style="margin-right:10px;">$!{user.userEmail}</div>
+                     #end
+                </a>
+            </li>
+        </ul>
+    	<ul class="list-unstyled c-us-list mt10">
+    		<li class="c-line clearfix pt_b5">
+                <a href="javascript:;" onclick="bankCardManage()" class="clearFloat">
+                    <div class="pull-left"><img class="c-us-icon" src="/images/c-icon3.png" width="25">银行卡管理</div>
+                    <div class="pull-right">&gt;</div>
+                </a>
+            </li>
+            <li class="c-line clearfix pt_b5">
+                <a href="/account/seCenter/modifyPsw" class="clearFloat">
+                    <div class="pull-left"><img class="c-us-icon" src="/images/c-icon4.png" width="25">登录密码</div>
+                    <div class="pull-right">&gt;</div>
+                </a>
+            </li>
+            <!-- <li class="c-line clearfix pt_b5">
+                <a href="/account/seCenter/modifyDealPwd">
+                    <div class="pull-left"><img class="c-us-icon" src="/images/c-icon5.png" width="25">交易密码</div>
+                    <div class="pull-right">&gt;</div>
+                </a>
+            </li>-->
+           	<li class="c-line clearfix pt_b5">
+                <a href="/mobile/qianDaoYe" class="clearFloat">
+                    <div class="pull-left"><img class="c-us-icon" src="/images/c-icon12.png" width="25">下载app</div>
+                    <div class="pull-right">&gt;</div>
+                </a>
+            </li>
+            
+            
+        </ul>
+    	<ul class="list-unstyled c-us-list mt10">
+            <li class="c-line clearfix pt_b5">
+                <a href="/account/myAward/MyCredits" class="clearFloat">
+                    <div class="pull-left"><img class="c-us-icon" src="/images/c-icon6.png" width="25">我的积分</div>
+                    <div class="pull-right">&gt;</div>
+                </a>
+            </li>
+            <li class="c-line clearfix pt_b5">
+                <a href="/account/myAward/myRedPaper" class="clearFloat">
+                    <div class="pull-left"><img class="c-us-icon" src="/images/zh_hongbao.png" width="25">我的红包</div>
+                    <div class="pull-right">&gt;</div>
+                </a>
+            </li>
+<!--             <li class="c-line clearfix pt_b5"> -->
+<!--                 <a href="/account/mySetting/platformLetter" class="clearFloat"> -->
+<!--                     <div class="pull-left"><img class="c-us-icon" src="/images/c-icon7.png" width="25">我的消息</div> -->
+<!--                     <div class="pull-right">&gt;</div> -->
+<!--                 </a> -->
+<!--             </li> -->
+            <li class="c-line clearfix pt_b5" class="clearFloat">
+                <a href="/mobile/aboutUs?fromKind=weixin" class="clearFloat">
+                    <div class="pull-left"><img class="c-us-icon" src="/images/c-icon8.png" width="25">关于我们</div>
+                    <div class="pull-right">&gt;</div>
+                </a>
+            </li>
+
+            <li class="c-line clearfix pt_b5">
+                <a href="/account/myAccount/problemMobile" class="clearFloat">
+                    <div class="pull-left"><img class="c-us-icon" src="/images/c-icon9.png" width="25">常见问题</div>
+                    <div class="pull-right">&gt;</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+	<div class="row pt10 pb10 bg_white">
+	    <div class="col-xs-3 col-sm-3 text-center"><a href="/index/Index"> <img src="/images/ta_cion1.png" width="30"/></a></div>
+        <div class="col-xs-3 col-sm-3 text-center"><a href="/invest/willInvestment"> <img src="/images/ta_cion2.png" width="30"/></a></div>
+        <div class="col-xs-3 col-sm-3 text-center"><a href="/account/myAccount/treasure"> <img src="/images/ta_cion3.png" width="30"/></a></div>
+        <div class="col-xs-3 col-sm-3 text-center"><a href="/account/myAccount/accountOverview"> <img src="/images/ta_cion4_red.png" width="30"/></a></div>
+	</div>
+</div>
+<script type="text/javascript">
+	//授权
+	function auth(){
+		if('$!{user.userRealName}'==''){
+			layer.alert('你还没有录入实名信息，请先录入！');
+			return;
+		}
+		if('$!{user.userEmail}'==''){
+			layer.alert('你还没有进行邮箱验证，请先验证');
+			return;
+		}
+		if('$!user.userBusinessState'=='' || '$!user.userBusinessState'<2){
+			layer.alert("请先开户");
+			return false;
+		}
+	   window.location.href="/account/myAccount/authorize";
+	}
+
+	// 个人用户开户
+	function openAccount(){	
+		
+		if('$!{user.userRealName}'==''){
+			layer.alert('你还没有录入实名信息，请先录入！');
+			return;
+		}
+		if('$!{user.userEmail}'==''){
+			layer.alert('你还没有进行邮箱验证，请先验证');
+			return;
+		}
+		layer.load('开户中...', 3);
+		window.location.href = "/account/myAccount/openAccount";
+	}
+	
+	//银行卡管理
+	function bankCardManage(){
+		
+		if('$!user.userBusinessState'=='' || '$!user.userBusinessState'<2){
+			layer.alert("请先开户");
+			return false;
+		}
+		window.location = '/account/myAccount/withdrawCash';
+	}
+	
+	
+	//企业开户
+	function companyOpenAccount(){
+		window.location.href="/account/myAccount/openAccount";
+	}
+	
+	<!-- 解决一个蛋疼的问题 -->
+	$(function (){
+		var imgUrl = '$!{levelIcon}';
+		if(imgUrl!='' && imgUrl!=null){
+			newImgUrl = imgUrl.replace("/Images/","/images/");
+			$("#danteng").attr("src",newImgUrl);
+		}
+	});
+</script>

@@ -1,0 +1,35 @@
+ 
+<!--头部-->
+<nav id="nav" class="nav">
+                            	    	<a class="navbar-brand" style="position:absolute; top:-7px; z-index:12;" href="zh-zhaiquanzhuanrang3.htm"><span class="glyphicon glyphicon-menu-left" style="color:#fff; font-size:25px;" aria-hidden="true"></span></a>
+
+        <div class=" index_suo text-center"><span>债权转让</span></div>
+</nav>
+<!--头部 end-->
+<div class="container">
+    <div class="row ff clearfix" style="padding-top:20px; padding-bottom:20px; margin-top:20px">
+        <div class="col-xs-4 col-sm-4"><img src="images/dui.png" class="img-responsive pull-right" style="margin-left:20px"></div>
+        <div class="col-xs-8 col-sm-8" style="line-height:1.5em; margin-top:15px">
+            <p style="font-size:18px;">恭喜您，转让成功！</p>
+            <p style="font-size:18px;">请耐心等待满标</p>
+        </div>
+    </div>
+    <div class="xyb-anniu mt20"><a href="zh-zhaiquanzhuanrang.htm">确定</a></div>
+</div>
+<script>
+ 
+
+	//保存Cookie完毕以后就可以通过Cookie来获取当前的皮肤了  
+	var cookie_skin = $.cookie("MyCssSkin");     //获取Cookie的值  
+	if (cookie_skin) {                          //如果确实存在Cookie  
+		switchSkin(cookie_skin);     //执行  
+	}
+	  
+});  
+function switchSkin(skinName) {     
+	$("#cssfile").attr("href", "css/skin/" + skinName + ".css"); //设置不同皮肤  
+	$.cookie("MyCssSkin", skinName, { path: '/', expires: 2 });  //保存Cookie  
+} 
+
+</script>
+ 
