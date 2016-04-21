@@ -13,17 +13,17 @@ public class SysConfigDaoTest extends BaseTest{
 
     @Test
     public void testCache(){
-        String result = sysConfigDao.findByCode("aa");
+        String result = sysConfigDao.findByCodeA("bb");
         System.out.println(result);
-        result = sysConfigDao.findByCode2("aa");
+        result = sysConfigDao.findByCodeB("bb");
         System.out.println(result);
     }
 
     @Test
     public void testCache2(){
-        String result = sysConfigDao.findByCode("aa");
+        String result = sysConfigDao.findByCodeA("aa");
         System.out.println(result);
-        result = sysConfigDao.findByCode("aa");
+        result = sysConfigDao.findByCodeB("aa");
         System.out.println(result);
     }
 }

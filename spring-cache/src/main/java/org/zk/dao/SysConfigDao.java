@@ -13,8 +13,8 @@ import java.util.TreeSet;
 @Repository
 public class SysConfigDao {
 
-    @Cacheable(value = "A", key = "'sys'+#code")
-    public String findByCode(String code) {
+    @Cacheable(value = "A", key = "'sys_'+#code")
+    public String findByCodeA(String code) {
         System.out.println("findByCode:" + code);
         if (code != null) {
             return code.toUpperCase();
@@ -23,8 +23,8 @@ public class SysConfigDao {
         }
     }
 
-    @Cacheable(value = "B", key = "'sys'+#code")
-    public String findByCode2(String code) {
+    @Cacheable(value = "B", key = "'sys_'+#code")
+    public String findByCodeB(String code) {
         System.out.println("findByCode:" + code);
         if (code != null) {
             return code.toUpperCase();
