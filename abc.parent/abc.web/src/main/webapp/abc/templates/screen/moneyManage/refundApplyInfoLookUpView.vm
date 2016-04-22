@@ -1,3 +1,0 @@
-<form id="Colyn">
-  $control.setTemplate("refund/refundInfoView.vm").setParameter("refundId", $refundId)
-</form>

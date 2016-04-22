@@ -1,6 +1,0 @@
-﻿@{
-    Layout = null;
-}
-
-<h2>Error</h2>
-@ViewBag.Message
