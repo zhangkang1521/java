@@ -1,0 +1,42 @@
+package org.zk.webservice.client;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.apache.cxf.binding.soap.saaj.SAAJOutInterceptor;
+import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
+import org.apache.cxf.ws.security.wss4j.WSS4JOutInterceptor;
+import org.apache.ws.security.WSConstants;
+import org.apache.ws.security.handler.WSHandlerConstants;
+import org.zk.webservice.server.HelloWorld;
+/**
+ * 客户端测试程序
+ * @author zhangkang
+ *
+ */
+public class HelloWorldClient {
+	public static void main(String[] args) {
+		// 以下和服务端安全配置保持一致
+		Map<String, Object> outProps = new HashMap<String, Object>();
+		outProps.put(WSHandlerConstants.ACTION,
+				WSHandlerConstants.USERNAME_TOKEN);
+		outProps.put(WSHandlerConstants.USER, "admin");
+		outProps.put(WSHandlerConstants.PASSWORD_TYPE, WSConstants.PW_TEXT);
+		// 指定在调用远程ws之前触发的回调函数WsClinetAuthHandler，其实类似于一个拦截器
+		outProps.put(WSHandlerConstants.PW_CALLBACK_CLASS,
+				WsClientAuthHandler.class.getName());
+		ArrayList list = new ArrayList();
+		list.add(new SAAJOutInterceptor());
+		list.add(new WSS4JOutInterceptor(outProps));
+
+		JaxWsProxyFactoryBean svr = new JaxWsProxyFactoryBean();
+		svr.setServiceClass(HelloWorld.class);
+		svr.setAddress("http://localhost:8081/webservice/helloWorld");
+		 //注入拦截器，用于加密安全验证信息
+		svr.getOutInterceptors().addAll(list);
+		HelloWorld hw = (HelloWorld) svr.create();
+
+		System.out.println(hw.sayHi("zk"));
+	}
+}
