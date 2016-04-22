@@ -4,6 +4,8 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
+import java.math.BigDecimal;
+
 /**
  * Unit test for simple App.
  */
@@ -33,6 +35,14 @@ public class AppTest
      */
     public void testApp()
     {
-        App.printLog();
+        App.printLogA();
+    }
+
+    public void testBigDecimal(){
+//        BigDecimal money = new BigDecimal("123.567");
+//        BigDecimal result = money.multiply(BigDecimal.valueOf(100)).setScale(0) ;
+//        System.out.println(result);
+        String omoney = ("0");
+        System.out.println(omoney);
     }
 }

@@ -11,7 +11,17 @@ public class App
 {
     public static Logger log = LoggerFactory.getLogger(App.class);
 
-   public static void printLog(){
-       log.debug("debug test");
+   public static void printLogAA(){
+      try{
+          printLogA();
+      } catch (Exception e){
+          log.error("调用logA失败！", e);
+      }
+      log.debug("printLogAA()");
    }
+
+    public static void printLogA(){
+        log.debug("invoke printLogA()");
+        throw new RuntimeException("xxx");
+    }
 }
