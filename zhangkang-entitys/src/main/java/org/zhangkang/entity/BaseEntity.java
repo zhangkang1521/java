@@ -1,4 +1,4 @@
-package org.zhangkang.commons;
+package org.zhangkang.entity;
 
 import com.alibaba.fastjson.JSON;
 

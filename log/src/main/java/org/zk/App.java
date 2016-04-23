@@ -27,4 +27,5 @@ public class App
         log.debug("invoke printLogA()");
        throw new RuntimeException("xxx");
     }
+
 }

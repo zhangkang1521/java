@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans>
+    <bean id="user1" class="org.zk.mySpring.entitys.User">
+        <property name="userName" value="zk"></property>
+        <property name="age" value="12"></property>
+        <property name="pen" ref="pen1"></property>
+    </bean>
+
+    <bean id="pen1" class="org.zk.mySpring.entitys.Pen">
+        <property name="name" value="hero"></property>
+        <property name="length" value="10"></property>
+    </bean>
+</beans>

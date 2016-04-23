@@ -26,10 +26,21 @@
       <artifactId>fastjson</artifactId>
       <version>1.2.8</version>
     </dependency>
-  <!--  <dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.7.18</version>
+    </dependency>
+    <dependency>
       <groupId>ojdbc</groupId>
       <artifactId>ojdbc</artifactId>
       <version>16</version>
-    </dependency>-->
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 </project>
