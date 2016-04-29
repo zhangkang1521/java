@@ -31,9 +31,10 @@ public class HelloWorldClient {
 
 		JaxWsProxyFactoryBean svr = new JaxWsProxyFactoryBean();
 		svr.setServiceClass(HelloWorld.class);
-		svr.setAddress("http://localhost:8081/webservice/helloWorld");
+		svr.setAddress("http://localhost:8080/webservice/helloWorld");
 		// 注入拦截器，用于加密安全验证信息
 		svr.getOutInterceptors().addAll(list);
+
 		HelloWorld hw = (HelloWorld) svr.create();
 
 		System.out.println(hw.sayHi("zk"));

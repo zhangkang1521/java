@@ -8,11 +8,11 @@ import javax.xml.ws.Endpoint;
  * @author zhangkang
  *
  */
-public class WebServiceApp {
+public class WebServiceTest {
 	public static void main(String[] args) {
 		System.out.println("web service start");
 		HelloWorldImpl implementor = new HelloWorldImpl();
-		String address = "http://localhost:8081/webservice/helloWorld";
+		String address = "http://localhost:8080/webservice/helloWorld";
 		Endpoint.publish(address, implementor);
 		System.out.println("web service started");
 	}

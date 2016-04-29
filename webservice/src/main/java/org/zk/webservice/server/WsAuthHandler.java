@@ -8,6 +8,9 @@ import javax.security.auth.callback.UnsupportedCallbackException;
 
 import org.apache.ws.security.WSPasswordCallback;
 
+/**
+ * webservice安全认证
+ */
 public class WsAuthHandler implements CallbackHandler {
 
 	public void handle(Callback[] callbacks) throws IOException,

@@ -6,11 +6,11 @@ import javax.jws.WebService;
 
 /**
  * 定义服务端接口
- * 需指定targetNamespace,否则必须和服务器包路径保持一致
+ * 需指定targetNamespace,且必须和服务器包路径保持一致
  * @author zhangkang
  *
  */
-@WebService(targetNamespace = "http://server.webservice.zk.org/", name = "HelloWorld")
+@WebService(targetNamespace = "http://server.webservice.zk.org/")
 public interface HelloWorld {
 	
 	@WebMethod
