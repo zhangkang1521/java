@@ -34,7 +34,7 @@ public class PubSubTest extends JedisPubSub {
     }
 
     public static  void main(String[] args) {
-        Jedis jedis = new Jedis("192.168.0.100", 6379);
+        Jedis jedis = new Jedis("localhost", 6379);
 //        Client client = jedis.getClient();
         jedis.set("aa", "AA");
 //        PubSubTest pubSubTest = new PubSubTest();
