@@ -10,9 +10,12 @@ import org.zk.service.UserService;
 @Service
 public class UserServiceImpl implements UserService {
 
+
     public User findById(Integer id) {
         User user = new User();
         user.setId(id);
+        System.out.println("findById"+id);
+        System.out.println(this.hashCode());
         return user;
     }
 

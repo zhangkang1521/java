@@ -9,7 +9,7 @@ import org.zk.aop.Sql;
 @Component
 public class UserDao {
 
-
+    //TODO mybatis只用写接口，怎么实现的！！
     @Sql(type= Sql.SqlType.UPDATE, value="delete from tb_user where id=?")
     public int deleteById(Integer id){
         return 1;

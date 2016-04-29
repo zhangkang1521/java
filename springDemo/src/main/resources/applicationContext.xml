@@ -11,8 +11,8 @@
 
     <context:component-scan base-package="org.zk"/>
 
+    <!-- @Aspectj 创建代理 -->
     <aop:aspectj-autoproxy/>
 
-    <!--<bean class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator" />-->
-
+    <import resource="redis.xml"/>
 </beans>
