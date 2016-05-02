@@ -12,7 +12,20 @@
     <context:component-scan base-package="org.zk"/>
 
     <!-- @Aspectj 创建代理 -->
-    <aop:aspectj-autoproxy/>
+    <!--<aop:aspectj-autoproxy/>-->
 
-    <import resource="redis.xml"/>
+    <!--<import resource="redis.xml"/>-->
+
+    <bean id="jobLauncher" class="org.springframework.batch.core.launch.support.SimpleJobLauncher">
+        <property name="jobRepository" ref="jobRepository"/>
+    </bean>
+
+    <bean id="jobRepository" class="org.springframework.batch.core.repository.support.MapJobRepositoryFactoryBean">
+    </bean>
+
+    <bean id="transactionManager"
+          class="org.springframework.batch.support.transaction.ResourcelessTransactionManager"/>
 </beans>
+
+
+
