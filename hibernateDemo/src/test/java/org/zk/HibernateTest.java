@@ -17,18 +17,18 @@ public class HibernateTest {
 
    // private static final CoreMessageLogger LOG = Logger.getMessageLogger( CoreMessageLogger.class, HibernateTest.class.getName() );
 
-//    @Test
-//    public void first() {
-//        SessionFactory sf = new Configuration().configure().buildSessionFactory();
-//        Session session = sf.openSession();
-//        session.beginTransaction();
-//        User user = new User();
-//        user.setUserName("zk");
-//        user.setAge(20);
-//        session.save(user);
-//        session.getTransaction().commit();
-//        sf.close();
-//    }
+    @Test
+    public void first() {
+        SessionFactory sf = new Configuration().configure().buildSessionFactory();
+        Session session = sf.openSession();
+        session.beginTransaction();
+        User user = new User();
+        user.setUserName("zk");
+        user.setAge(20);
+        session.save(user);
+        session.getTransaction().commit();
+        sf.close();
+    }
 
     @Test
     public void testLog(){
