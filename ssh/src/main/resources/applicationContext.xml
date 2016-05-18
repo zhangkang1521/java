@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+        http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="org.zk"/>
+
+    <!-- @Aspectj 创建代理 -->
+    <!--<aop:aspectj-autoproxy/>-->
+
+    <!--<import resource="redis.xml"/>-->
+
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
+          destroy-method="close">
+        <property name="url" value="jdbc:mysql://192.168.129.12:3306/zk" />
+        <property name="username" value="root" />
+        <property name="password" value="123456" />
+        <property name="maxActive" value="50"/>
+        <property name="initialSize" value="10"/>
+        <property name="maxWait" value="60000"/>
+        <property name="minIdle" value="1"/>
+        <property name="timeBetweenEvictionRunsMillis" value="60000"/>
+        <property name="minEvictableIdleTimeMillis" value="300000"/>
+        <property name="validationQuery" value="SELECT 'x' FROM DUAL"/>
+        <property name="testWhileIdle" value="true"/>
+        <property name="testOnBorrow" value="false"/>
+        <property name="testOnReturn" value="false"/>
+        <property name="poolPreparedStatements" value="true"/>
+        <property name="maxPoolPreparedStatementPerConnectionSize" value="50"/>
+        <property name="maxOpenPreparedStatements" value="100"/>
+        <property name="filters" value="config,stat,wall"/>
+        <!--<property name="connectionProperties" value="config.decrypt=true"/>-->
+        <property name="proxyFilters">
+            <list>
+                <ref bean="druidLogFilter"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="druidLogFilter" class="com.alibaba.druid.filter.logging.Slf4jLogFilter">
+        <property name="dataSourceLogEnabled" value="false"/>
+        <property name="connectionLogEnabled" value="false"/>
+        <property name="resultSetLogEnabled" value="false"/>
+        <property name="statementCreateAfterLogEnabled" value="false"/>
+        <property name="statementPrepareAfterLogEnabled" value="false"/>
+        <property name="statementPrepareCallAfterLogEnabled" value="false"/>
+        <property name="statementExecuteAfterLogEnabled" value="false"/>
+        <property name="statementExecuteQueryAfterLogEnabled" value="true"/>
+        <property name="statementExecuteUpdateAfterLogEnabled" value="true"/>
+        <property name="statementExecuteBatchAfterLogEnabled" value="true"/>
+        <property name="statementCloseAfterLogEnabled" value="false"/>
+        <property name="statementParameterSetLogEnabled" value="true"/>
+        <property name="statementExecutableSqlLogEnable" value="false"/>
+    </bean>
+
+    <bean id="sessionFactory"
+          class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+                <prop key="hibernate.show_sql">false</prop>
+            </props>
+        </property>
+        <property name="packagesToScan" value="org.zk.entity" />
+    </bean>
+
+
+</beans>
+
+
+

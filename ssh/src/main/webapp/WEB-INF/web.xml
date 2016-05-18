@@ -1,0 +1,28 @@
+<web-app version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+  <display-name>Archetype Created Web Application</display-name>
+  
+  <servlet>
+    <servlet-name>userServlet</servlet-name>
+    <servlet-class>org.zk.controller.UserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>userServlet</servlet-name>
+    <url-pattern>/user.s</url-pattern>
+  </servlet-mapping>
+
+
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:applicationContext.xml</param-value>
+  </context-param>
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+
+
+</web-app>
