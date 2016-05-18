@@ -56,8 +56,14 @@
     <dependency>
       <groupId>org.springframework.batch</groupId>
       <artifactId>spring-batch-core</artifactId>
-      <version>3.0.7.RELEASE</version>
+      <version>3.0.1.RELEASE</version>
     </dependency>
+    <dependency>
+      <groupId>org.springframework.batch</groupId>
+      <artifactId>spring-batch-test</artifactId>
+      <version>3.0.1.RELEASE</version>
+    </dependency>
+    <!-- spring batch end -->
 
     <dependency>
       <groupId>org.aspectj</groupId>

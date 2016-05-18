@@ -20,15 +20,19 @@ public class SpringHibernateTest extends AbstractJUnit4SpringContextTests {
     @Autowired
     SessionFactory sf;
 
+//    Log log = LogFactory.getLog(SpringHibernateTest.class);
+
     @Test
     public void test1(){
-        Session session = sf.openSession();
-        session.beginTransaction();
-        User user = new User();
-        user.setUserName("zk");
-        user.setAge(21);
-        session.save(user);
-        session.getTransaction().commit();
-        sf.close();
+//        log.debug("xx");
+//        System.out.println(log.getClass());
+//        Session session = sf.openSession();
+//        session.beginTransaction();
+//        User user = new User();
+//        user.setUserName("zk");
+//        user.setAge(21);
+//        session.save(user);
+//        session.getTransaction().commit();
+//        sf.close();
     }
 }

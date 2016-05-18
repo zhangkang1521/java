@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding= "UTF-8"?>
+<configuration debug= "false">
+
+    <appender name ="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder >
+            <pattern>[v6_webservice][%p]%d{yyyy-MM-dd HH:mm:ss.SSS} %m - %c%n</pattern>
+        </encoder >
+    </appender >
+
+    <appender name ="ASYNC_CONSOLE" class= "ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref ="CONSOLE"/>
+    </appender>
+
+
+    <logger name="org.springframework">
+        <level value="ERROR"/>
+    </logger>
+    <logger name="org.hibernate">
+        <level value="ERROR"/>
+    </logger>
+    <logger name="org.apache.cxf">
+        <level value="ERROR"/>
+    </logger>
+    <logger name="org.apache.zookeeper">
+        <level value="ERROR"/>
+    </logger>
+
+
+    <root level ="debug">
+        <appender-ref ref ="CONSOLE" />
+    </root >
+</configuration>
