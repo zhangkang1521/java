@@ -23,4 +23,37 @@ public class StringUtilsTest {
             Assert.assertEquals(e.getClass(), IllegalArgumentException.class);
         }
     }
+
+    @Test
+    public void testBuildSetmethod(){
+        long start = System.currentTimeMillis();
+        for(int i=0; i<10000; i++){
+            String str = "asdfasdf"+i;
+            StringUtils.buildSetMethodName(str);
+        }
+        System.out.println(System.currentTimeMillis()-start);
+
+//        long start2 = System.currentTimeMillis();
+//        for(int i=0; i<1000; i++){
+//            StringUtils.buildSetMethodName2("userName");
+//        }
+//        System.out.println(System.currentTimeMillis()-start2);
+
+    }
+
+    @Test
+    public void testFirst2Upcase(){
+        Assert.assertEquals("UserName", StringUtils.first2Upcase("UserName"));
+        Assert.assertEquals("UserName", StringUtils.first2Upcase("userName"));
+    }
+
+    @Test
+    public void test(){
+        Param param = new Param();
+//        param.setAmount("100");
+        param.setBankCode("8003");
+        param.setOrderId("BILL2016010245234");
+        String str = StringUtils.buildUrlparam(param);
+        System.out.println(str);
+    }
 }
