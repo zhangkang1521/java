@@ -55,7 +55,8 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
     }
 
     /**
-     * 将对象拼装成url参数字符串，即key1=value1&key2=value2&key3=value3
+     * 将对象拼装成url参数字符串，即key1=value1&key2=value2&key3=value3<br>
+     * 顺序按照类中声明的顺序拼装，可用ParamIgnore注解需要忽略的属性
      *
      * @param obj
      * @return

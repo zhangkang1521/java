@@ -1,5 +1,7 @@
 package org.zhangkang.entity;
 
+import java.util.Date;
+
 /**
  * Created by Administrator on 2016/4/23.
  */
@@ -7,6 +9,15 @@ public class User extends BaseEntity {
     private Integer id;
     private String userName;
     private Integer age;
+    private Date birthDay;
+
+    public Date getBirthDay() {
+        return birthDay;
+    }
+
+    public void setBirthDay(Date birthDay) {
+        this.birthDay = birthDay;
+    }
 
     public Integer getId() {
         return id;
