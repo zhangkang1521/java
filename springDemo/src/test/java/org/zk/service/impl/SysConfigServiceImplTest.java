@@ -7,15 +7,15 @@ import org.zk.BaseTest;
 /**
  * Created by zhangkang on 2016/4/27.
  */
-public class SysConfigServiceImplTest extends BaseTest {
+public class SysConfigServiceImplTest {
 
-    @Autowired
-    SysConfigServceImpl service;
+//    @Autowired
+//    SysConfigServceImpl service;
 
-    @Test
-    public void test1(){
-        // 没有实现接口 cglib代理
-        System.out.println(service.getClass());
-        service.getConfig("ss");
-    }
+//    @Test
+//    public void test1(){
+//        // 没有实现接口 cglib代理
+//        System.out.println(service.getClass());
+//        service.getConfig("ss");
+//    }
 }

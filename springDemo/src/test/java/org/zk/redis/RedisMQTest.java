@@ -10,14 +10,14 @@ import org.zk.BaseTest;
  */
 public class RedisMQTest extends BaseTest {
 
-    @Autowired
-    RedisMQ redisMQ;
+//    @Autowired
+//    RedisMQ redisMQ;
 
     @Test
     public void testPublish() {
-        for (int i = 0; i < 3; i++) {
-            redisMQ.publish("mail", "send mail "+i);
-            redisMQ.publish("sms", "send message "+i);
-        }
+//        for (int i = 0; i < 3; i++) {
+//            redisMQ.publish("mail", "send mail "+i);
+//            redisMQ.publish("sms", "send message "+i);
+//        }
     }
 }

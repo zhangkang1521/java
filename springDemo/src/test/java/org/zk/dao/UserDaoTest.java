@@ -12,9 +12,14 @@ public class UserDaoTest extends BaseTest{
     @Autowired
     UserDao userDao;
 
-    @Test
+   // @Test
     public void test1(){
         System.out.println(userDao.getClass());
         userDao.deleteById(2);
+    }
+
+    //@Test
+    public void test(){
+
     }
 }
