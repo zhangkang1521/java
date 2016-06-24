@@ -3,7 +3,7 @@
 
     <appender name ="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder >
-            <pattern>[v6_webservice][%p]%d{yyyy-MM-dd HH:mm:ss.SSS} %m - %c%n</pattern>
+            <pattern>%p [%c] %L - [%m] %n</pattern>
         </encoder >
     </appender >
 
@@ -13,17 +13,16 @@
 
 
     <logger name="org.springframework">
-        <level value="ERROR"/>
+        <level value="error"/>
     </logger>
     <logger name="org.hibernate">
-        <level value="ERROR"/>
+        <level value="error"/>
     </logger>
-    <logger name="org.apache.cxf">
-        <level value="ERROR"/>
+    <logger name="druid.sql.*">
+        <level value="DEBUG"/>
     </logger>
-    <logger name="org.apache.zookeeper">
-        <level value="ERROR"/>
-    </logger>
+
+
 
 
     <root level ="debug">

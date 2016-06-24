@@ -1,10 +1,13 @@
 package org.zhangkang.entity;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
 /**
  * Created by Administrator on 2016/4/23.
  */
 public class User extends BaseEntity {
     private Integer id;
+   @JSONField(serialize = false)
     private String userName;
     private Integer age;
 

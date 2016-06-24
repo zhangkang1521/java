@@ -7,6 +7,15 @@ import org.slf4j.Marker;
  * Created by Administrator on 2016/4/23.
  */
 public class MyLogger implements Logger {
+
+    public void debug(String s) {
+        System.out.println("[debug]hello,this is my logger! print[" + s + "]");
+    }
+
+    public void info(String s) {
+        System.out.println("[info]hello,this is my logger! print[" + s + "]");
+    }
+
     public String getName() {
         return "myLogger";
     }
@@ -16,7 +25,7 @@ public class MyLogger implements Logger {
     }
 
     public void trace(String s) {
-        System.out.println("hello,this is my logger! print["+s+"]");
+        System.out.println("hello,this is my logger! print[" + s + "]");
     }
 
     public void trace(String s, Object o) {
@@ -63,9 +72,6 @@ public class MyLogger implements Logger {
         return false;
     }
 
-    public void debug(String s) {
-
-    }
 
     public void debug(String s, Object o) {
 
@@ -111,9 +117,6 @@ public class MyLogger implements Logger {
         return false;
     }
 
-    public void info(String s) {
-
-    }
 
     public void info(String s, Object o) {
 
