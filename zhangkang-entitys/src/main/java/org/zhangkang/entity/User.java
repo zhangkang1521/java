@@ -1,8 +1,6 @@
 package org.zhangkang.entity;
 
-import com.alibaba.fastjson.annotation.JSONField;
-
-/**
+import java.util.Date;import com.alibaba.fastjson.annotation.JSONField;/**
  * Created by Administrator on 2016/4/23.
  */
 public class User extends BaseEntity {
@@ -10,6 +8,15 @@ public class User extends BaseEntity {
    @JSONField(serialize = false)
     private String userName;
     private Integer age;
+    private Date birthDay;
+
+    public Date getBirthDay() {
+        return birthDay;
+    }
+
+    public void setBirthDay(Date birthDay) {
+        this.birthDay = birthDay;
+    }
 
     public Integer getId() {
         return id;
