@@ -4,7 +4,7 @@
     <!-- 控制台日志 -->
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>[logback][%p]%d{yyyy-MM-dd HH:mm:ss.SSS} %m - %c%n</pattern>
+            <pattern>%p [%c] %L - [%m] %n</pattern>
         </encoder>
     </appender>
 
@@ -13,55 +13,24 @@
         <appender-ref ref="CONSOLE"/>
     </appender>
 
-    <!-- 文件日志 每天产生一个 -->
-    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>
-                E:/home/v6_webservice_logs/v6_webservice%d{yyyy-MM-dd}.log
-            </fileNamePattern>
-        </rollingPolicy>
-        <encoder>
-            <pattern>[v6_webservice][%p]%d{yyyy-MM-dd HH:mm:ss.SSS} %m - %c%n</pattern>
-            <charset>UTF-8</charset>
-        </encoder>
-    </appender>
-
-    <!-- 异步文件 -->
-    <appender name="ASYNC_FILE" class="ch.qos.logback.classic.AsyncAppender">
-        <appender-ref ref="FILE"/>
-    </appender>
-
 
     <logger name="org.springframework">
         <level value="ERROR"/>
     </logger>
-    <logger name="org.springframework.aop">
-        <level value="INFO"/>
-    </logger>
+
     <logger name="org.hibernate">
-        <level value="ERROR"/>
+        <level value="error"/>
     </logger>
-    <logger name="org.apache.cxf">
-        <level value="ERROR"/>
-    </logger>
-    <logger name="org.apache.zookeeper">
-        <level value="ERROR"/>
-    </logger>
-    <logger name="org.apache.curator">
-        <level value="ERROR"/>
+    <logger name="org.hibernate.engine.transaction.internal.jdbc.JdbcTransaction">
+        <level value="debug"/>
     </logger>
 
     <logger name="druid.sql.Statement">
         <level value="DEBUG"/>
     </logger>
 
-    <logger name="com.xxdai">
-        <level value="DEBUG"/>
-    </logger>
-
 
     <root level="debug">
         <appender-ref ref="ASYNC_CONSOLE"/>
-        <appender-ref ref="ASYNC_FILE"/>
     </root>
 </configuration>

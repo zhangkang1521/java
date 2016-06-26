@@ -1,17 +1,22 @@
-package org.zhangkang.entity;
+package org.zk.entity;
 
+import javax.persistence.*;
 import java.util.Date;
-
-import com.alibaba.fastjson.annotation.JSONField;
 
 /**
  * Created by Administrator on 2016/4/23.
  */
-public class User extends BaseEntity {
+@Table(name="tb_user")
+@Entity
+public class User{
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @JSONField(serialize = false)
+    @Column(name="user_name")
     private String userName;
+    @Column
     private Integer age;
+    @Column
     private Date birthDay;
 
     public Date getBirthDay() {
