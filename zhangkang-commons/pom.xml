@@ -82,5 +82,10 @@
       <version>5.1.37</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.zhangkang.entitys</groupId>
+      <artifactId>zhangkang-entitys</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
   </dependencies>
 </project>

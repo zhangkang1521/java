@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 public class ShowClassTest {
 
-    @Test
+   // @Test
     public void test1() {
         ClassUtils.showInherit(C.class);
         ClassUtils.showInherit(ArrayList.class);

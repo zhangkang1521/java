@@ -19,6 +19,8 @@
     <context:annotation-config/>
     <context:component-scan base-package="org.zk"/>
 
+    <cache:annotation-driven cache-manager="cacheManager"/>
+
     <!-- redis cache-->
     <bean id="redisConnectionFactory"
           class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
@@ -46,16 +48,17 @@
         <constructor-arg name="template" ref="redisTemplate"/>
         <property name="expires">
             <map>
+                <entry key="testExpire" value="120"/><!-- 2min -->
             </map>
         </property>
     </bean>
-    <cache:annotation-driven cache-manager="cacheManager"/>
 
-    <!-- redis cache end
+    <!-- redis cache end-->
 
-    <cache:annotation-driven cache-manager="cacheManager"/>
 
-    <bean id="cacheManager"
+
+
+    <!--<bean id="cacheManager"
           class="org.springframework.cache.support.SimpleCacheManager">
         <property name="caches">
             <set>
@@ -66,9 +69,13 @@
                         p:name="A"/>
                 <bean class="org.springframework.cache.concurrent.ConcurrentMapCacheFactoryBean"
                       p:name="B"/>
+                <bean class="org.springframework.cache.concurrent.ConcurrentMapCacheFactoryBean"
+                      p:name="find"/>
+                <bean class="org.springframework.cache.concurrent.ConcurrentMapCacheFactoryBean"
+                      p:name="find2"/>
             </set>
         </property>
-    </bean> -->
+    </bean>-->
 
 
 </beans>
