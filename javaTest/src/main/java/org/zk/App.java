@@ -1,19 +1,16 @@
 package org.zk;
 
-import org.zhangkang.entity.User;
-import sun.misc.GC;
-
-import java.lang.ref.WeakReference;
-import java.util.*;
-
 /**
  * Hello world!
- *
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
+public class App {
+
+    public int id = 1;
+    public void test(){
+        id++;
+        System.out.println("test");
+    }
+    public static void main(String[] args) {
 //        for(int i=0; i<10; i++){
 //            GcTest gcTest = new GcTest();
 //            WeakReference weakReference = new WeakReference(gcTest);

@@ -3,6 +3,7 @@ package org.zhangkang.commons.utils;
 import org.junit.Test;
 
 import java.sql.ResultSet;
+import java.util.Enumeration;
 import java.util.ResourceBundle;
 
 /**
@@ -24,6 +25,23 @@ public class DbUtilsTest {
         if(rs.next()){
             Object obj = rs.getObject(1);
             System.out.println(obj);
+        }
+    }
+
+    @Test
+    public void testUpdate() throws Exception{
+        DbUtils db = new DbUtils();
+        db.executeUpdate("update tb_user set age=? where id=?", 10, 3);
+    }
+
+    @Test
+    public void testResource() throws Exception{
+        ClassLoader systemClassLoader = ClassLoader.getSystemClassLoader();
+        System.out.println(systemClassLoader);
+        //
+        Enumeration em = systemClassLoader.getResources("");
+        while (em.hasMoreElements()){
+            System.out.println(em.nextElement());
         }
     }
 }

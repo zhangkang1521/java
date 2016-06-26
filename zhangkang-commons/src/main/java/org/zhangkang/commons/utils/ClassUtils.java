@@ -1,4 +1,4 @@
-package org.zhangkang.commons;
+package org.zhangkang.commons.utils;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -7,7 +7,7 @@ import java.util.Set;
 /**
  * 显示类信息
  */
-public class ShowClass {
+public class ClassUtils {
 
 	/**实现的接口集合*/
 	private static Set<Class> interfaceSet = new HashSet<Class>();

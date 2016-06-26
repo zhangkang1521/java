@@ -36,8 +36,8 @@ public class DbUtils {
             username = rb.getString("jdbc.username");
             password = rb.getString("jdbc.password");
 
-            Class.forName(driverName);
-        } catch (ClassNotFoundException e) {
+            //Class.forName(driverName);
+        } catch (Exception e) {
             LOG.debug("加载数据库驱动失败", e);
         }
     }

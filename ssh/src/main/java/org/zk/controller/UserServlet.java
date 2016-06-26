@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  * Created by zhangkang on 2016/5/10.
@@ -20,9 +21,10 @@ public class UserServlet extends HttpServlet{
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        logger.debug("log4j-over-slf4j xxd debug");
-        logger.warn("xxd warn");
-        logger.error("xxd error");
-        LOG.debug("xx");
+        System.out.println("test");
+        PrintWriter pw = resp.getWriter();
+        pw.append(this.getClass().getClassLoader().hashCode()+"xx");
+        pw.flush();
+        pw.close();
     }
 }

@@ -1,6 +1,7 @@
 package org.zhangkang.commons;
 
 import org.junit.Test;
+import org.zhangkang.commons.utils.ClassUtils;
 
 import java.util.ArrayList;
 
@@ -11,7 +12,7 @@ public class ShowClassTest {
 
     @Test
     public void test1() {
-        ShowClass.showInherit(C.class);
-        ShowClass.showInherit(ArrayList.class);
+        ClassUtils.showInherit(C.class);
+        ClassUtils.showInherit(ArrayList.class);
     }
 }
