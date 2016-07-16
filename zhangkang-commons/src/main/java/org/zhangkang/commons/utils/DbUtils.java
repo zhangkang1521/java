@@ -3,11 +3,7 @@ package org.zhangkang.commons.utils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.Date;
 import java.util.ResourceBundle;
 
@@ -20,6 +16,7 @@ public class DbUtils {
 
     private Connection conn;
     private PreparedStatement pStmt;
+    private Statement stmt;
     private ResultSet rs;
 
     private static String driverName;
@@ -36,7 +33,7 @@ public class DbUtils {
             username = rb.getString("jdbc.username");
             password = rb.getString("jdbc.password");
 
-            //Class.forName(driverName);
+            Class.forName(driverName);
         } catch (Exception e) {
             LOG.debug("加载数据库驱动失败", e);
         }
@@ -104,6 +101,19 @@ public class DbUtils {
         return pStmt.executeUpdate();
     }
 
+    public boolean executeSql(String sql) {
+        try {
+            if (conn == null) {
+                conn = this.getConnection();
+            }
+            stmt = conn.createStatement();
+            return stmt.execute(sql);
+        } catch (Exception e) {
+            LOG.error("execute sql error", e);
+            throw new RuntimeException("execute sql error");
+        }
+    }
+
     /**
      * 关闭资源
      *
@@ -116,6 +126,9 @@ public class DbUtils {
             }
             if (pStmt != null) {
                 pStmt.close();
+            }
+            if (stmt != null) {
+                stmt.close();
             }
             if (conn != null) {
                 conn.close();

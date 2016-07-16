@@ -3,6 +3,7 @@
 <head>
     <title>xss demo</title>
     <%--<script src="static/js/getCookie.js"></script>--%>
+    <script src="static/js/submit.js"></script>
 </head>
 <body>
     ${content}

@@ -18,5 +18,24 @@ f.appendChild(i2);
 
 f.submit();*/
 
+// xmlHttpRequest
+var url = "http://localhost:8080/servlet/param.s";
+var data = "username=zk&password=1234";
+var ajax = null;
+if(window.XMLHttpRequest){
+    ajax = new XMLHttpRequest();
+} else if(window.ActiveXObject){
+    ajax = new ActiveXObject("Microsoft.XMLHTTP");
+} else {
+    alert('not support ajax');
+}
+ajax.open("POST", url, true);
+ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+ajax.send(data);
+
+ajax.onreadystatechange = function () {
+    console.log(ajax);
+}
+
 
 
