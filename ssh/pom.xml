@@ -87,10 +87,10 @@
 
         <dependency>
             <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>2.3</version>
-            <scope>provided</scope>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
         </dependency>
+
 
 
         <!-- log -->
@@ -130,6 +130,12 @@
             <version>1.6.1</version>
         </dependency>
         <!-- log end -->
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.2</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>ssh</finalName>
