@@ -22,10 +22,9 @@ public class HibernateTest {
         SessionFactory sf = new Configuration().configure().buildSessionFactory();
         Session session = sf.openSession();
         session.beginTransaction();
-        User user = new User();
-        user.setUserName("zk");
-        user.setAge(20);
-        session.save(user);
+        User user = (User)session.get(User.class, 1);
+        user.setAge(12);
+        session.evict(user);
         session.getTransaction().commit();
         sf.close();
     }

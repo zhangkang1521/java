@@ -35,10 +35,9 @@ public class PubSubTest extends JedisPubSub {
 
     public static  void main(String[] args) {
         Jedis jedis = new Jedis("localhost", 6379);
-//        Client client = jedis.getClient();
-        jedis.set("aa", "AA");
-//        PubSubTest pubSubTest = new PubSubTest();
-//        pubSubTest.proceed(client, "news.share", "news.blog");
+        Client client = jedis.getClient();
+        PubSubTest pubSubTest = new PubSubTest();
+        pubSubTest.proceed(client, "a", "b");
         jedis.close();
         System.out.println("over");
     }

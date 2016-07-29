@@ -16,7 +16,7 @@
     <!-- @Aspectj 创建代理 -->
     <!--<aop:aspectj-autoproxy/>-->
 
-    <!--<import resource="redis.xml"/>-->
+    <import resource="redis.xml"/>
 
 
 </beans>
