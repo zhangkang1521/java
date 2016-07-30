@@ -2,6 +2,8 @@ package org.zk;
 
 import org.apache.zookeeper.KeeperException;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
@@ -11,16 +13,14 @@ import java.util.concurrent.TimeUnit;
  */
 public class DistributedSharedLockTest {
 
-    @Test
-    public void test() throws Exception{
+    Logger logger = LoggerFactory.getLogger(DistributedSharedLockTest.class);
 
-    }
 
     @Test
     public void test2() throws Exception{
-        for(int i=0; i<5; i++){
-            new Thread(new MyThread(i)).start();
-        }
+        DistributedSharedLock lock = new DistributedSharedLock("/root");
+        lock.acquire();
+        lock.release();
     }
 
     public static void main(String[] args) {
@@ -40,12 +40,18 @@ public class DistributedSharedLockTest {
                 lock.acquire();
                 System.out.println(id+"lock" + new Date());
                 Thread.sleep(5000);
-                lock.release();
+
                 System.out.println(id+"unlock");
-            } catch (KeeperException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+            } finally {
+                try {
+                    if(lock!=null) {
+                        lock.release();
+                    }
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
             }
 
         }

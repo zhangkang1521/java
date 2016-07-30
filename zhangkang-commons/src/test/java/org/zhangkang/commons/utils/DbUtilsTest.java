@@ -32,12 +32,15 @@ public class DbUtilsTest {
     public void testUpdate() throws Exception{
         DbUtils db = new DbUtils();
         db.executeUpdate("update tb_user set age=? where id=?;drop table tb_user;", 40, 3);
+        db.close();
     }
 
     @Test
     public void testSql(){
         DbUtils db = new DbUtils();
-        db.executeSql("update tb_user set age=3 where id=2;drop table tb_test;");
+        String sql = "update tb_user set age=22 where id=";
+        sql += "1 and database()='zk'";
+        int row = db.executeSql(sql);
         db.close();
     }
 

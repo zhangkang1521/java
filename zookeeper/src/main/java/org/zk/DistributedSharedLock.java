@@ -13,7 +13,7 @@ import java.util.TreeSet;
  */
 public class DistributedSharedLock implements Watcher {
 
-    private static final String ADDR = "192.168.129.12:2181";
+    private static final String ADDR = "localhost:2181";
     private static final String LOCK_NODE = "guid-lock-";
     private String rootLockNode; //锁目录
     private ZooKeeper zk = null;
@@ -30,8 +30,10 @@ public class DistributedSharedLock implements Watcher {
     public DistributedSharedLock(String rootLockNode) {
         this.rootLockNode = rootLockNode;
         try {
-            //连接zk服务器
-            zk = new ZooKeeper(ADDR, 10 * 10000, this);
+            //连接zk服务
+            // TODO look out thie expire time, if time out ,the created node will delete,so the lock does't work,
+            zk = new ZooKeeper(ADDR, 10*1000, this);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
