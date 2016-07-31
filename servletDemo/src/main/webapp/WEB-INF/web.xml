@@ -23,6 +23,15 @@
     <servlet-name>xssServlet</servlet-name>
     <url-pattern>/xss.s</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>tokenServlet</servlet-name>
+    <servlet-class>org.zk.controller.TokenServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>tokenServlet</servlet-name>
+    <url-pattern>/token.s</url-pattern>
+  </servlet-mapping>
   
   <servlet>
     <servlet-name>jsonServlet</servlet-name>

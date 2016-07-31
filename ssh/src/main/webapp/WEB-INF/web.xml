@@ -4,38 +4,35 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 
-  <display-name>Archetype Created Web Application</display-name>
-  
-  <servlet>
-    <servlet-name>userServlet</servlet-name>
-    <servlet-class>org.zk.controller.UserServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>userServlet</servlet-name>
-    <url-pattern>/user.s</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-    <servlet-name>xssServlet</servlet-name>
-    <servlet-class>org.zk.controller.XssServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>xssServlet</servlet-name>
-    <url-pattern>/xss.s</url-pattern>
-  </servlet-mapping>
-  
-  <welcome-file-list>
-    <welcome-file>index.jsp</welcome-file>
-  </welcome-file-list>
+    <display-name>Archetype Created Web Application</display-name>
 
 
-  <!--<context-param>
-    <param-name>contextConfigLocation</param-name>
-    <param-value>classpath:applicationContext.xml</param-value>
-  </context-param>
-  <listener>
-    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-  </listener>-->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath:applicationContext.xml</param-value>
+    </context-param>
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>SpringMVC</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:spring-mvc.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SpringMVC</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
 
 
 </web-app>

@@ -40,7 +40,7 @@ public class DbUtilsTest {
         DbUtils db = new DbUtils();
         String sql = "update tb_user set age=22 where id=";
         sql += "1 and database()='zk'";
-        int row = db.executeSql(sql);
+        //int row = db.executeSql(sql);
         db.close();
     }
 
