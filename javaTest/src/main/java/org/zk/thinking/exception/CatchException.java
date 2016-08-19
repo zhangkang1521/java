@@ -1,6 +1,4 @@
-package org.zk.exception;
-
-import java.io.IOException;
+package org.zk.thinking.exception;
 
 /**
  * Created by Administrator on 8/14/2016.

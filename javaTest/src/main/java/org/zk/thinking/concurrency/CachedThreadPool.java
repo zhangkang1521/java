@@ -1,4 +1,4 @@
-package org.zk.concurrency;
+package org.zk.thinking.concurrency;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

@@ -1,4 +1,4 @@
-package org.zk.concurrency;
+package org.zk.thinking.concurrency;
 
 /**
  * Created by Administrator on 8/14/2016.

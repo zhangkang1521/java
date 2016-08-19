@@ -1,6 +1,4 @@
-package org.zk.concurrency;
-
-import java.util.concurrent.TimeUnit;
+package org.zk.thinking.concurrency;
 
 /**
  * Created by Administrator on 8/14/2016.

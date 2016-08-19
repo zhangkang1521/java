@@ -1,4 +1,4 @@
-package org.zk.exception;
+package org.zk.thinking.exception;
 
 import com.alibaba.fastjson.JSONObject;
 
