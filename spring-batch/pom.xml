@@ -1,20 +1,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
   <groupId>org.zk</groupId>
-  <artifactId>springDemo</artifactId>
+  <artifactId>spring-batch</artifactId>
+  <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
-
-  <name>springDemo</name>
+  <name>spring-batch Maven Webapp</name>
   <url>http://maven.apache.org</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <spring.version>4.0.0.RELEASE</spring.version>
   </properties>
-
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -65,17 +63,6 @@
     </dependency>
     <!-- spring batch end -->
 
-    <dependency>
-      <groupId>org.aspectj</groupId>
-      <artifactId>aspectjweaver</artifactId>
-      <version>1.8.2</version>
-    </dependency>
-    <dependency>
-      <groupId>org.aspectj</groupId>
-      <artifactId>aspectjrt</artifactId>
-      <version>1.8.2</version>
-    </dependency>
-
     <!-- log -->
     <dependency>
       <groupId>org.slf4j</groupId>
@@ -89,30 +76,10 @@
     </dependency>
     <!-- log end -->
 
-    <dependency>
-      <groupId>org.zhangkang.commons</groupId>
-      <artifactId>zhangkang-commons</artifactId>
-      <version>1.0-SNAPSHOT</version>
-    </dependency>
-
-    <dependency>
-      <groupId>mysql</groupId>
-      <artifactId>mysql-connector-java</artifactId>
-      <version>5.1.37</version>
-    </dependency>
-
-    <!-- redis -->
-    <dependency>
-      <groupId>org.springframework.data</groupId>
-      <artifactId>spring-data-redis</artifactId>
-      <version>1.3.2.RELEASE</version>
-    </dependency>
-    <dependency>
-      <groupId>redis.clients</groupId>
-      <artifactId>jedis</artifactId>
-      <version>2.4.2</version>
-    </dependency>
-    <!-- redis end -->
-
   </dependencies>
+
+
+  <build>
+    <finalName>spring-batch</finalName>
+  </build>
 </project>
