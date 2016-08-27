@@ -7,7 +7,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.zk.BaseTest;
 import org.zk.beans.User;
 import org.zk.dao.UserDao;
-import org.zk.utils.SpringFactory;
 
 /**
  * Created by zhangkang on 2016/4/27.

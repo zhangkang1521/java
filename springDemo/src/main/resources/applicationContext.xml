@@ -11,12 +11,12 @@
         http://www.springframework.org/schema/context
          http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="org.zk"/>
+    <!--<context:component-scan base-package="org.zk"/>-->
 
     <!-- @Aspectj 创建代理 -->
     <!--<aop:aspectj-autoproxy/>-->
 
-    <import resource="redis.xml"/>
+    <bean id="user" class="org.zk.beans.User"></bean>
 
 
 </beans>

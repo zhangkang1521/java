@@ -3,8 +3,6 @@ package org.zk.service.impl;
 import org.springframework.stereotype.Service;
 import org.zk.beans.User;
 import org.zk.service.UserService;
-import org.zk.utils.DistributedLock;
-import org.zk.utils.SpringFactory;
 
 import java.util.Date;
 
@@ -24,16 +22,16 @@ public class UserServiceImpl implements UserService {
     }
 
     public void testLock(String id){
-        DistributedLock lock = new DistributedLock();
-        try{
-            lock.lock();
-            System.out.println("lock"+id+":"+new Date());
-            Thread.sleep(2000);
-        }catch(Exception e){
-            e.printStackTrace();
-        } finally {
-
-        }
+//        DistributedLock lock = new DistributedLock();
+//        try{
+//            lock.lock();
+//            System.out.println("lock"+id+":"+new Date());
+//            Thread.sleep(2000);
+//        }catch(Exception e){
+//            e.printStackTrace();
+//        } finally {
+//
+//        }
     }
 
 }
