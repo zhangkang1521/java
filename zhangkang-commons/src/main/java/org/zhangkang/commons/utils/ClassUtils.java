@@ -1,5 +1,6 @@
 package org.zhangkang.commons.utils;
 
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
@@ -51,6 +52,17 @@ public class ClassUtils {
 		showSuperClass(c);
 		System.out.println("implement interfaces:");
 		showInterfaces(c);
+	}
+
+	/**
+	 * 打印类中的方法
+	 * @param c
+     */
+	public static void showMethods(Class<?> c){
+		Method[] methods = c.getDeclaredMethods();
+		for (int i = 0; i < methods.length; i++) {
+			System.out.println(methods[i]);
+		}
 	}
 
 }
