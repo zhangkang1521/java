@@ -16,7 +16,18 @@
     <!-- @Aspectj 创建代理 -->
     <!--<aop:aspectj-autoproxy/>-->
 
-    <bean id="user" class="org.zk.beans.User"></bean>
+    <bean id="user" name="user1,user2" class="org.zk.beans.User">
+        <property name="id" value="100"/>
+        <property name="userName" value="zhangkang"/>
+        <property name="list">
+            <list>
+                <value>aa</value>
+                <value>bb</value>
+                <value>cc</value>
+            </list>
+        </property>
+    </bean>
+
 
 
 </beans>
