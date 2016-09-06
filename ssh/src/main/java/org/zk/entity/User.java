@@ -16,16 +16,16 @@ public class User{
     private String userName;
     @Column
     private Integer age;
-    @Column
-    private Date birthDay;
+//    @Column
+//    private Date birthDay;
 
-    public Date getBirthDay() {
-        return birthDay;
-    }
-
-    public void setBirthDay(Date birthDay) {
-        this.birthDay = birthDay;
-    }
+//    public Date getBirthDay() {
+//        return birthDay;
+//    }
+//
+//    public void setBirthDay(Date birthDay) {
+//        this.birthDay = birthDay;
+//    }
 
     public Integer getId() {
         return id;
