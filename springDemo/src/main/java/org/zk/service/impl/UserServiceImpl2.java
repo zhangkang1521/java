@@ -11,7 +11,5 @@ public class UserServiceImpl2 implements UserService {
         return null;
     }
 
-    public void testLock(String id) {
 
-    }
 }

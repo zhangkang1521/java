@@ -8,5 +8,4 @@ import org.zk.beans.User;
 public interface UserService {
 
     User findById(Integer id);
-    void testLock(String id);
 }

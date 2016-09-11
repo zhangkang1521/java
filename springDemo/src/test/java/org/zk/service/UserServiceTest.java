@@ -18,19 +18,8 @@ public class UserServiceTest extends BaseTest {
 
     @Test
     public void testFind() {
-        new Thread(new MyThread(service)).start();
-//        new MyThread(service).start();
+        service.findById(1);
     }
 
-    static class MyThread implements Runnable{
-        UserService service;
-        public MyThread(UserService service){
-            this.service = service;
-        }
 
-        public void run() {
-			System.out.println("ss");
-            service.testLock("b");
-        }
-    }
 }

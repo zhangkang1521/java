@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 /**
  * Created by zhangkang on 2016/4/27.
  */
-@Service
+//@Service
 public class SysConfigServceImpl {
 
     public Object getConfig(String key){
