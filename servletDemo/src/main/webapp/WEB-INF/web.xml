@@ -41,6 +41,10 @@
     <servlet-name>jsonServlet</servlet-name>
     <url-pattern>*.json</url-pattern>
   </servlet-mapping>
+  
+  <listener>
+    <listener-class>org.zk.listener.MyListener</listener-class>
+  </listener>
 
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
