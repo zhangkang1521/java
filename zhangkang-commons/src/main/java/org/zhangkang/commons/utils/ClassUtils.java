@@ -1,5 +1,6 @@
 package org.zhangkang.commons.utils;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -62,6 +63,21 @@ public class ClassUtils {
 		Method[] methods = c.getDeclaredMethods();
 		for (int i = 0; i < methods.length; i++) {
 			System.out.println(methods[i]);
+		}
+	}
+
+	/**
+	 * 打印类中的构造方法
+	 * @param c
+     */
+	public static void showConstructs(Class<?> c){
+		Constructor[] constructors = c.getConstructors();
+		if(constructors == null || constructors.length == 0){
+			System.out.println("没有找到构造方法");
+		} else {
+			for (Constructor con : constructors) {
+				System.out.println(con);
+			}
 		}
 	}
 
