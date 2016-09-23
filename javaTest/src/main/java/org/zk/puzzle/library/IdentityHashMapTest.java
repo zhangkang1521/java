@@ -10,7 +10,7 @@ import java.util.Map;
 public class IdentityHashMapTest {
     public static void main(String[] args) {
         //判断key是否相等 用 ==
-        IdentityHashMap<Key, String> map1 = new IdentityHashMap<>();
+        IdentityHashMap<Key, String> map1 = new IdentityHashMap<Key, String>();
         Key key1 = new Key("zk");
         Key key2 = new Key("zk");
         System.out.println(key1 == key2);
@@ -19,7 +19,7 @@ public class IdentityHashMapTest {
         System.out.println(map1);
 
         // 判断key是否相等 hashCode && equals 想等
-        HashMap<Key, String> map2 = new HashMap<>();
+        HashMap<Key, String> map2 = new HashMap<Key, String>();
         System.out.println(key1.hashCode() == key2.hashCode());
         System.out.println(key1.equals(key2));
         map2.put(key1, "value1");

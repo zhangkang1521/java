@@ -1,5 +1,7 @@
 package org.zk;
 
+import java.nio.charset.Charset;
+
 /**
  * Hello world!
  */
@@ -24,7 +26,7 @@ public class App {
 //        System.out.println(weakReference.get());
 //        System.gc();// 弱引用执行gc时一定回收
 //        System.out.println(weakReference.get());
-        System.out.println("test");
+        System.out.println(Charset.defaultCharset());
     }
 
 
