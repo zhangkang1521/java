@@ -1,10 +1,10 @@
 package org.zk.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.zk.service.UserService;
-import org.zk.service.impl.UserServiceImpl;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * Created by Administrator on 9/4/2016.
@@ -18,7 +18,16 @@ public class UserController {
 
     @RequestMapping("list")
     public void list(){
-        System.out.println("query user list");
+        //throw new RuntimeException("ss");
+        //System.out.println("query user list");
+    }
+
+    @RequestMapping("del")
+    @ResponseBody
+    public String del(HttpServletResponse response){
+        response.setContentType("application/json");
+       // throw new RuntimeException("s");
+       return "{\"id\":\"100\"}";
     }
 
 
