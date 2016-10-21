@@ -1,10 +1,9 @@
-package org.zk;
+package org.zk.other;
 
 import org.zhangkang.commons.utils.FileUtils;
 
 import java.io.File;
 import java.io.InputStream;
-import java.lang.reflect.Method;
 
 /**
  * Created by root on 16-6-10.

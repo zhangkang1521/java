@@ -1,4 +1,4 @@
-package org.zk;
+package org.zk.other;
 
 /**
  * Created by root on 16-5-28.
