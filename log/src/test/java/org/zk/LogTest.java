@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  */
 public class LogTest {
 
-        private static Logger logger = LoggerFactory.getLogger(LogTest.class);
+        private static Logger logger = LoggerFactory.getLogger("aa");
     //private static org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(LogTest.class);
 
     @Test
@@ -19,5 +19,10 @@ public class LogTest {
         }catch (Exception e){
             logger.error("error happend", e);
         }
+    }
+
+    @Test
+    public void testCc() {
+        new SubClass().b();
     }
 }
