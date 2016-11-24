@@ -18,6 +18,35 @@ public class HibernateTest {
    // private static final CoreMessageLogger LOG = Logger.getMessageLogger( CoreMessageLogger.class, HibernateTest.class.getName() );
 
     @Test
+    public void testSave() {
+        SessionFactory sf = new Configuration().configure().buildSessionFactory();
+        Session session = sf.openSession();
+        session.beginTransaction();
+        User user = new User();
+        //user.setId(10);
+        user.setUserName("zk");
+        session.save(user);
+        session.getTransaction().commit();
+        sf.close();
+    }
+
+    @Test
+    public void testMerge() {
+        SessionFactory sf = new Configuration().configure().buildSessionFactory();
+        Session session = sf.openSession();
+        session.beginTransaction();
+        User user = new User();
+        // 不提供id ,insert
+        // 提供id, 找到update,找不到insert
+        user.setId(19);
+        user.setUserName("zy");
+        session.merge(user);
+        session.getTransaction().commit();
+        sf.close();
+    }
+
+
+    @Test
     public void first() {
         SessionFactory sf = new Configuration().configure().buildSessionFactory();
         Session session = sf.openSession();
