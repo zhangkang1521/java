@@ -42,6 +42,11 @@
       <version>19.0</version>
     </dependency>
     <dependency>
+      <groupId>joda-time</groupId>
+      <artifactId>joda-time</artifactId>
+      <version>1.6.2</version>
+    </dependency>
+    <dependency>
       <groupId>commons-codec</groupId>
       <artifactId>commons-codec</artifactId>
       <version>1.10</version>
@@ -61,6 +66,12 @@
       <artifactId>mysql-connector-java</artifactId>
       <!--<version>5.0.2</version>-->
       <version>5.1.37</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid</artifactId>
+      <version>1.0.9</version>
     </dependency>
 
 
