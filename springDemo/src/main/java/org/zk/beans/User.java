@@ -11,9 +11,6 @@ public class User {
     private Integer age;
     List<String> list;
 
-    private User(){
-        System.out.println("sss");
-    }
 
     public Integer getId() {
         return id;

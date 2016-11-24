@@ -28,16 +28,16 @@
         </property>
     </bean>-->
 
-    <bean id="myAdvisor" class="org.zk.aop.MyAdvisor"></bean>
+   <!-- <bean id="myAdvisor" class="org.zk.aop.MyAdvisor"></bean>
 
     <aop:config>
         <aop:aspect ref="myAdvisor">
-            <!-- 切点 -->
+            &lt;!&ndash; 切点 &ndash;&gt;
             <aop:pointcut id="myPointCut" expression="execution(* org.zk.service..*(..))" />
-            <!-- before Advisor -->
+            &lt;!&ndash; before Advisor &ndash;&gt;
             <aop:before method="beforeAdvice" pointcut-ref="myPointCut"/>
         </aop:aspect>
-    </aop:config>
+    </aop:config>-->
 
 
 

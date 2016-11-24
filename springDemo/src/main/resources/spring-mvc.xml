@@ -18,10 +18,36 @@
 
     <mvc:annotation-driven />
 
+    <bean id="contentNegotiatingResolver"
+          class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+        <property name="order" value="1" />
+        <property name="mediaTypes">
+            <map>
+                <entry key="html" value="text/html"/>
+                <entry key="pdf" value="application/pdf"/>
+                <entry key="xls" value="application/vnd.ms-excel"/>
+                <entry key="xml" value="application/xml"/>
+                <entry key="json" value="application/json"/>
+            </map>
+        </property>
+        <property name="defaultViews">
+            <list>
+                <bean class="org.springframework.web.servlet.view.json.MappingJacksonJsonView"/>
+                <bean class="org.zk.view.MyExcelView"/>
+            </list>
+        </property>
+
+        <property name="ignoreAcceptHeader" value="true" />
+    </bean>
+
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="order" value="2"/>
         <property name="prefix" value="/view/" />
         <property name="suffix" value=".jsp" />
     </bean>
+
+   <!-- <bean class="org.zk.view.MyExcelView">
+    </bean>-->
 
 
 
