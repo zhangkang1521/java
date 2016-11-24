@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>Hello World!22</h2>
+<h2>servlet welcome!</h2>
 </body>
 </html>

@@ -10,9 +10,12 @@ import javax.servlet.ServletContextListener;
 public class MyListener implements ServletContextListener {
 
     public void contextInitialized(ServletContextEvent sce) {
-        ServletContext application = sce.getServletContext();
-        application.setAttribute("root", "application is a type of javax.servlet.ServletContext");
-        System.out.println(application.getAttribute("root"));
+        ServletContext sc = sce.getServletContext();
+        sc.setAttribute("root", "application is a type of javax.servlet.ServletContext");
+        System.out.println(sc.getAttribute("root"));
+        // servlet 2.5
+        System.out.println(sc.getMajorVersion());
+        System.out.println(sc.getMinorVersion());
     }
 
     public void contextDestroyed(ServletContextEvent sce) {
