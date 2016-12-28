@@ -88,6 +88,12 @@
       <scope>test</scope>
     </dependency>
     <dependency>
+      <groupId>com.oracle</groupId>
+      <artifactId>ojdbc6_g</artifactId>
+      <version>11.2</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
       <groupId>org.zhangkang.entitys</groupId>
       <artifactId>zhangkang-entitys</artifactId>
       <version>1.0-SNAPSHOT</version>
