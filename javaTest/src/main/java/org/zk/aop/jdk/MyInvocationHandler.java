@@ -6,6 +6,7 @@ import java.util.Arrays;
 
 /**
  * 代理一个接口，不用写具体的实现类
+ * http://blog.csdn.net/zhu_tianwei/article/details/40076391
  * Created by root on 16-6-11.
  */
 public class MyInvocationHandler implements InvocationHandler {
