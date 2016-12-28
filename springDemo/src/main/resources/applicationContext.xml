@@ -3,13 +3,16 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
 
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans.xsd
-        http://www.springframework.org/schema/aop
-        http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
-        http://www.springframework.org/schema/context
-         http://www.springframework.org/schema/context/spring-context.xsd">
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/aop
+            http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+            http://www.springframework.org/schema/context
+             http://www.springframework.org/schema/context/spring-context.xsd
+             http://www.springframework.org/schema/tx
+             http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
 
     <context:component-scan base-package="org.zk"/>
 
@@ -28,16 +31,54 @@
         </property>
     </bean>-->
 
-   <!-- <bean id="myAdvisor" class="org.zk.aop.MyAdvisor"></bean>
+    <bean id="myAdvisor" class="org.zk.aop.MyAdvisor"></bean>
 
     <aop:config>
         <aop:aspect ref="myAdvisor">
-            &lt;!&ndash; 切点 &ndash;&gt;
+            <!-- 切点 -->
             <aop:pointcut id="myPointCut" expression="execution(* org.zk.service..*(..))" />
-            &lt;!&ndash; before Advisor &ndash;&gt;
+            <!-- before Advisor -->
             <aop:before method="beforeAdvice" pointcut-ref="myPointCut"/>
         </aop:aspect>
-    </aop:config>-->
+    </aop:config>
+
+
+
+
+    <!-- 整合hibernate3 -->
+    <!--<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
+          destroy-method="close">
+        <property name="url" value="jdbc:oracle:thin:@localhost:1521:ZK"/>
+        <property name="username" value="scott"/>
+        <property name="password" value="123456"/>
+        <property name="initialSize" value="1" />
+    </bean>
+
+    <bean id="sessionFactory"
+          class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.format_sql">true</prop>
+            </props>
+        </property>
+        <property name="mappingDirectoryLocations">
+            <value>classpath:mappings</value>
+        </property>
+    </bean>
+
+    <bean class="org.springframework.orm.hibernate3.HibernateTemplate">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+
+    <bean id="transactionManager"
+          class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+    <tx:annotation-driven transaction-manager="transactionManager"/>-->
+    <!-- 整合hibernate3 end -->
 
 
 
