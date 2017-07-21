@@ -11,7 +11,7 @@ import java.util.Map;
 public class LinkedHashMapTest {
 
     public static void main(String[] args) {
-        LinkedHashMap<String, String> map = new LinkedHashMap<>(16, 0.75f, true);
+        LinkedHashMap<String, String> map = new LinkedHashMap<String, String>(16, 0.75f, true);
         map.put("1", "111");
         map.put("2", "222");
         map.put("3", "222");

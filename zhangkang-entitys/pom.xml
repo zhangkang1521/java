@@ -15,4 +15,11 @@
             <version>1.2.8</version>
         </dependency>
     </dependencies>
+	<distributionManagement>
+		<repository>
+			<id>snapshots</id>
+			<name>驴妈妈 Maven 代理库快照</name>
+			<url>http://192.168.0.101:8081/nexus/content/repositories/snapshots/</url>
+		</repository>
+	</distributionManagement>
 </project>
