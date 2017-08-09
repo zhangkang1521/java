@@ -1,4 +1,4 @@
-package org.zk.other;
+package org.zk.other.string;
 
 import java.io.StringWriter;
 
