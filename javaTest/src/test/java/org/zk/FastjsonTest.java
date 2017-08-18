@@ -2,6 +2,8 @@ package org.zk;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.parser.Feature;
+import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.google.common.collect.Lists;
 import org.testng.annotations.Test;
 import org.zhangkang.entity.User;
@@ -22,7 +24,8 @@ public class FastjsonTest {
         user.setAge(20);
         user.setBirthDay(new Date());
         System.out.println(JSON.toJSONString(user));
-        System.out.println(JSON.toJSONStringWithDateFormat(user, "yyyy-MM-dd HH:mm:ss"));
+        System.out.println(JSON.toJSONString(user, SerializerFeature.IgnoreNonFieldGetter));
+//        System.out.println(JSON.toJSONStringWithDateFormat(user, "yyyy-MM-dd HH:mm:ss"));
     }
 
     @Test

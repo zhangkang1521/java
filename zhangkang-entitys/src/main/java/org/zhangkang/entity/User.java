@@ -14,6 +14,10 @@ public class User extends BaseEntity {
     private Integer age;
     private Date birthDay;
 
+    public String getAgeStr(){
+        return age+"岁";
+    }
+
     public Date getBirthDay() {
         return birthDay;
     }
