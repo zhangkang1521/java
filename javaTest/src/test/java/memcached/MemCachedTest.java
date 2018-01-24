@@ -14,7 +14,8 @@ public class MemCachedTest {
 
     @BeforeTest
     public void testBefore() {
-        String[] servers = {"10.200.4.77:11211"};
+//        String[] servers = {"10.200.4.77:11211"};
+        String[] servers = {"10.200.4.77:11211", "10.200.4.78:11211"};
         SockIOPool pool = SockIOPool.getInstance();
         pool.setServers(servers);
         pool.setFailover(true);
@@ -31,13 +32,13 @@ public class MemCachedTest {
 
     @Test
     public void testSet() {
-        memCachedClient.set("a", "AAA");
+        memCachedClient.set("second", "in 77 78");
     }
 
     @Test
     public void testGet() {
         // set key flag expire byte (flag必须是32才能读出来)
-        System.out.println(memCachedClient.get("a"));
-        System.out.println(memCachedClient.get("b"));
+        System.out.println(memCachedClient.get("first"));
+        System.out.println(memCachedClient.get("second"));
     }
 }
